@@ -46,13 +46,14 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupTabBar()
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().tintColor = UIColor.black
     }
     
     func setupTabBar() {
         var viewControllers:[UIViewController] = []
         // TODO: Generic storyBoard ViewController al
 //        let storyBoard = UIStoryboard(name: , bundle: nil)
-        
         items.forEach { TabbarItemType in
             var vc = UIViewController()
             switch TabbarItemType {
