@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */; };
+		D1CD47B228CCE7E6003EB7A0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */; };
 		D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */; };
 		D1E3A8EF28CCAFB5002BD071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */; };
 		D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D1E3A8E928CCAFB5002BD071 /* TimePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1CD47B028CCE7CD003EB7A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D1E3A8E028CCAFB4002BD071 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,8 @@
 		D1E3A8EB28CCAFB5002BD071 /* TimePad */ = {
 			isa = PBXGroup;
 			children = (
+				D1CD47B028CCE7CD003EB7A0 /* Extensions */,
+				D1E3A94528CCE5D3002BD071 /* Constants */,
 				D1E3A92F28CCDDA5002BD071 /* Fonts */,
 				D1E3A91D28CCCB6D002BD071 /* Controllers */,
 				D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */,
@@ -221,6 +235,14 @@
 				D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */,
 			);
 			path = rubik;
+			sourceTree = "<group>";
+		};
+		D1E3A94528CCE5D3002BD071 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +392,8 @@
 				D1E3A92628CCCBCF002BD071 /* AddViewController.swift in Sources */,
 				D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */,
 				D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */,
+				D1CD47B228CCE7E6003EB7A0 /* UIColorExtension.swift in Sources */,
+				D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */,
 				D1E3A8EF28CCAFB5002BD071 /* SceneDelegate.swift in Sources */,
 				D1E3A92228CCCBAA002BD071 /* HomeViewController.swift in Sources */,
 				D1E3A92A28CCCBE9002BD071 /* DetailsViewController.swift in Sources */,

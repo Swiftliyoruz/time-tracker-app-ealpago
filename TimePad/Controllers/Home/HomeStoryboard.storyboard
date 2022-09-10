@@ -4,8 +4,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -19,22 +28,69 @@
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpJ-ac-B91" userLabel="Top Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYg-wi-yv7">
-                                                <rect key="frame" x="0.0" y="0.0" width="35" height="818"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="31"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u56-jo-bqc">
-                                                <rect key="frame" x="35" y="0.0" width="339" height="818"/>
+                                                <rect key="frame" x="52" y="0.0" width="322" height="31"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-Qp-RWm" userLabel="Card View">
+                                        <rect key="frame" x="0.0" y="31" width="374" height="787"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="300" translatesAutoresizingMaskIntoConstraints="NO" id="g74-Bi-vv6">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="369"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-qI-1ha" userLabel="Hour Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="172" height="38"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:32:10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S9-qK-ZfA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="38"/>
+                                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="32"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-RO-ihB">
+                                                                <rect key="frame" x="135" y="0.0" width="37" height="38"/>
+                                                                <color key="tintColor" red="0.94805478629999995" green="0.94805478629999995" blue="0.94805478629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-tL-1Px">
+                                                        <rect key="frame" x="10" y="338" width="152" height="31"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-76-0jv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasion Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZR-6x-PZz">
+                                                                <rect key="frame" x="44.5" y="0.0" width="107.5" height="31"/>
+                                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -47,6 +103,13 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mSd-h6-nkp" secondAttribute="bottom" id="xcm-Ri-8oz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardDetailsButton" destination="fbf-RO-ihB" id="RMg-0o-MSe"/>
+                        <outlet property="cardHourLabel" destination="3S9-qK-ZfA" id="QGQ-nr-yMk"/>
+                        <outlet property="cardView" destination="Nmd-Qp-RWm" id="QzR-Er-830"/>
+                        <outlet property="moreButton" destination="u56-jo-bqc" id="Nmc-Gl-cEK"/>
+                        <outlet property="taskLabel" destination="FYg-wi-yv7" id="k5c-nB-PgH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,6 +117,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
