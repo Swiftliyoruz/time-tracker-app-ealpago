@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ColorConstant{
+class ColorConstant {
     static let shared = ColorConstant()
     
     let mainBackgroundColor = UIColor(rgb: 0xFAFAFF)

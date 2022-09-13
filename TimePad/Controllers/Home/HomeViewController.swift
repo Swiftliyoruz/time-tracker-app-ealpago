@@ -26,30 +26,29 @@ class HomeViewController: UIViewController {
         setupTableView()
     }
     
-    func setupColor(){
+    func setupColor() {
         view.backgroundColor = ColorConstant.shared.mainBackgroundColor
         cardView?.backgroundColor = ColorConstant.shared.cardBackgroundColor
         taskLabel?.textColor = ColorConstant.shared.titleTextColor
         cardHourLabel?.textColor = ColorConstant.shared.cardHourColor
         todayLabel?.textColor = ColorConstant.shared.cardBackgroundColor
         seeAllButton?.tintColor = ColorConstant.shared.cardBackgroundColor
-        workTableView?.backgroundColor = UIColor.white
     }
     
-    func setupCardView(){
+    func setupCardView() {
         cardView?.layer.masksToBounds = true
         cardView?.layer.cornerRadius = cardView!.frame.width/30.0
         cardView?.layer.borderWidth = 0.3
     }
     
-    func setupTableView(){
+    func setupTableView() {
         workTableView?.dataSource = self
         workTableView?.delegate = self
         workTableView?.register(UINib(nibName: TableViewConstant.shared.cellNibName, bundle: nil), forCellReuseIdentifier: TableViewConstant.shared.cellReusIdentifier)
     }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
