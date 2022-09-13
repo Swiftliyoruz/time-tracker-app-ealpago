@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
         <array key="Rubik-Regular.ttf">
             <string>Rubik-Regular</string>
         </array>
@@ -50,7 +53,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqS-6Y-NXt">
                                                 <rect key="frame" x="0.0" y="0.0" width="157.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -98,9 +101,12 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="MHC-qV-JlK" firstAttribute="leading" secondItem="qYE-34-0UY" secondAttribute="leading" id="KgX-v8-8LQ"/>
                                     <constraint firstAttribute="bottom" secondItem="MHC-qV-JlK" secondAttribute="bottom" constant="16" id="oys-f0-bKx"/>
@@ -123,7 +129,8 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="D6v-yZ-4e0" secondAttribute="bottom" id="3qf-2n-x4q"/>
                                                     <constraint firstItem="D6v-yZ-4e0" firstAttribute="top" secondItem="jnD-zv-vgV" secondAttribute="top" id="6wo-AN-Chw"/>
@@ -143,7 +150,8 @@
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="zT1-N4-ZVl" firstAttribute="top" secondItem="Bg9-6W-38T" secondAttribute="top" id="9We-Sl-ddr"/>
                                                     <constraint firstAttribute="trailing" secondItem="zT1-N4-ZVl" secondAttribute="trailing" id="UOM-85-AAc"/>
@@ -152,9 +160,12 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="tF0-Sg-Xhg" firstAttribute="top" secondItem="Kt9-1h-5os" secondAttribute="top" constant="19" id="62P-fX-HJu"/>
                                     <constraint firstAttribute="trailing" secondItem="tF0-Sg-Xhg" secondAttribute="trailing" constant="16" id="SKI-MG-dry"/>
@@ -163,8 +174,11 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" red="0.94805478629999995" green="0.94805478629999995" blue="0.94805478629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="0ko-vW-VxU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="45L-NX-H8W"/>
                     <constraint firstAttribute="trailing" secondItem="0ko-vW-VxU" secondAttribute="trailing" id="4eL-Zs-Pgb"/>
@@ -173,15 +187,19 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainStackView" destination="0ko-vW-VxU" id="A5h-NF-whp"/>
+                <outlet property="personalOrWorkcategoryLabel" destination="cH3-xU-1MT" id="Do5-Rs-UvP"/>
+                <outlet property="workCategoryLabel" destination="yiI-Lg-yge" id="NZd-lQ-2qf"/>
+                <outlet property="workTimeLabel" destination="D6v-yZ-4e0" id="XMU-Eq-Pof"/>
+                <outlet property="workTitleLabel" destination="RqS-6Y-NXt" id="TqD-xc-jHj"/>
+            </connections>
             <point key="canvasLocation" x="168.84057971014494" y="138.61607142857142"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Icon Monitor Circle" width="44" height="44"/>
         <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -15,4 +15,7 @@ class ColorConstant {
     let titleTextColor = UIColor(rgb: 0x070417)
     let cardBackgroundColor = UIColor(rgb: 0x070417)
     let cardHourColor = UIColor(rgb: 0xFFFFFF)
+    
+    let tableViewCellWorkTitleTextColor = UIColor(rgb: 0x000000)
+    let tableViewWorkHourTextColor = UIColor(rgb: 0x4F4F4F)
 }

@@ -46,7 +46,7 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupTabBar()
-        UITabBar.appearance().backgroundColor = UIColor.clear
+        UITabBar.appearance().backgroundColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.black
     }
     
