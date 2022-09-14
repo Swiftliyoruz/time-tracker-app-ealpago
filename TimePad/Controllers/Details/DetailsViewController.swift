@@ -8,22 +8,30 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
+    @IBOutlet private var projectNameLabel: UILabel?
+    @IBOutlet private var firstCategoryLabel: UILabel?
+    @IBOutlet private var secondCategoryLabel: UILabel?
+    @IBOutlet private var projectHourLabel: UILabel?
+    @IBOutlet private var pauseLabel: UILabel?
+    @IBOutlet private var pauseView: UIView?
+    @IBOutlet private var pauseButton: UIButton?
+    @IBOutlet private var quitLabel: UILabel?
+    @IBOutlet private var quitView: UIView?
+    @IBOutlet private var quitButton: UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUIColors()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUIColors() {
+        projectNameLabel?.textColor = UIColor.black
+        firstCategoryLabel?.textColor = UIColor.black
+        secondCategoryLabel?.textColor = UIColor.black
+        projectHourLabel?.textColor = UIColor.black
+        pauseLabel?.textColor = UIColor.black
+        quitLabel?.textColor = UIColor.black
     }
-    */
-
+    
 }
