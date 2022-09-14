@@ -61,6 +61,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-Qp-RWm" userLabel="Card View">
                                                 <rect key="frame" x="0.0" y="48" width="374" height="114"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki4-cR-STd" userLabel="Card Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                    </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g74-Bi-vv6">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
                                                         <subviews>
@@ -146,7 +152,11 @@
                                                     <constraint firstItem="g74-Bi-vv6" firstAttribute="top" secondItem="Nmd-Qp-RWm" secondAttribute="top" id="1q9-dp-Jug"/>
                                                     <constraint firstAttribute="trailing" secondItem="g74-Bi-vv6" secondAttribute="trailing" id="JPD-c8-9TU"/>
                                                     <constraint firstItem="g74-Bi-vv6" firstAttribute="leading" secondItem="Nmd-Qp-RWm" secondAttribute="leading" id="MFd-en-F8M"/>
+                                                    <constraint firstItem="Ki4-cR-STd" firstAttribute="leading" secondItem="Nmd-Qp-RWm" secondAttribute="leading" id="Wtb-cC-SnN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ki4-cR-STd" secondAttribute="bottom" id="afq-4j-HF9"/>
+                                                    <constraint firstItem="Ki4-cR-STd" firstAttribute="top" secondItem="Nmd-Qp-RWm" secondAttribute="top" id="bOH-Jn-rua"/>
                                                     <constraint firstAttribute="height" constant="114" id="eQ9-RA-Mag"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ki4-cR-STd" secondAttribute="trailing" id="mfk-fe-1FM"/>
                                                     <constraint firstAttribute="bottom" secondItem="g74-Bi-vv6" secondAttribute="bottom" id="pyQ-wV-Rsi"/>
                                                 </constraints>
                                             </view>

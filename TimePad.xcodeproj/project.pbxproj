@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D158AA0128D22850007B5095 /* ProjectButtonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D158AA0028D22850007B5095 /* ProjectButtonDetailsViewController.swift */; };
+		D158AA0328D22863007B5095 /* ProjectButtonDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D158AA0228D22863007B5095 /* ProjectButtonDetailsStoryboard.storyboard */; };
 		D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */; };
 		D1CD47B228CCE7E6003EB7A0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */; };
 		D1CD47B628CF85FD003EB7A0 /* TodayWorksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D158AA0028D22850007B5095 /* ProjectButtonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectButtonDetailsViewController.swift; sourceTree = "<group>"; };
+		D158AA0228D22863007B5095 /* ProjectButtonDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectButtonDetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D158A9FF28D22826007B5095 /* ProjectButtonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D158AA0028D22850007B5095 /* ProjectButtonDetailsViewController.swift */,
+				D158AA0228D22863007B5095 /* ProjectButtonDetailsStoryboard.storyboard */,
+			);
+			path = ProjectButtonDetails;
+			sourceTree = "<group>";
+		};
 		D1CD47B028CCE7CD003EB7A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +207,7 @@
 		D1E3A91D28CCCB6D002BD071 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D158A9FF28D22826007B5095 /* ProjectButtonDetails */,
 				D1E3A92028CCCB96002BD071 /* Details */,
 				D1E3A91F28CCCB8F002BD071 /* Add */,
 				D1E3A91E28CCCB85002BD071 /* Home */,
@@ -370,6 +384,7 @@
 				D1E3A94428CCDDB3002BD071 /* Rubik-BoldItalic.ttf in Resources */,
 				D1E3A8F928CCAFB7002BD071 /* LaunchScreen.storyboard in Resources */,
 				D1E3A8F628CCAFB7002BD071 /* Assets.xcassets in Resources */,
+				D158AA0328D22863007B5095 /* ProjectButtonDetailsStoryboard.storyboard in Resources */,
 				D1E3A93F28CCDDB3002BD071 /* Rubik-Black.ttf in Resources */,
 				D1E3A94228CCDDB3002BD071 /* Rubik-BlackItalic.ttf in Resources */,
 				D1CD47B728CF85FD003EB7A0 /* TodayWorksTableViewCell.xib in Resources */,
@@ -407,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D158AA0128D22850007B5095 /* ProjectButtonDetailsViewController.swift in Sources */,
 				D1E3A92628CCCBCF002BD071 /* AddViewController.swift in Sources */,
 				D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */,
 				D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */,
