@@ -11,9 +11,11 @@ class TodayWorksTableViewCell: UITableViewCell {
     
     @IBOutlet private var mainStackView: UIStackView?
     @IBOutlet private var workTitleLabel: UILabel?
-    @IBOutlet private var workCategoryLabel: UILabel?
-    @IBOutlet private var personalOrWorkcategoryLabel: UILabel?
+    @IBOutlet private var firstCategoryLabel: UILabel?
+    @IBOutlet private var secondCategoryLabel: UILabel?
     @IBOutlet private var workTimeLabel: UILabel?
+    @IBOutlet private var firstCategoryView: UIView?
+    @IBOutlet private var secondCategoryView: UIView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,11 +33,22 @@ class TodayWorksTableViewCell: UITableViewCell {
         mainStackView?.backgroundColor = UIColor.white
         workTitleLabel?.textColor = ColorConstant.shared.tableViewCellWorkTitleTextColor
         workTimeLabel?.textColor = ColorConstant.shared.tableViewWorkHourTextColor
+        
+        firstCategoryView?.backgroundColor = ColorConstant.shared.workCategoryViewColor
+        firstCategoryLabel?.textColor = ColorConstant.shared.workCategoryLabelColor
+        
+        secondCategoryView?.backgroundColor = ColorConstant.shared.RasionProjectViewColor
+        secondCategoryLabel?.textColor = ColorConstant.shared.RasionProjectLabelColor
     }
     
     func setupCellView() {
         mainStackView?.layer.masksToBounds = true
         mainStackView?.layer.cornerRadius = mainStackView!.frame.width/30.0
-        mainStackView?.layer.borderWidth = 0.3
+        
+        firstCategoryView?.layer.masksToBounds = true
+        firstCategoryView?.layer.cornerRadius = firstCategoryView!.frame.width/8.0
+        
+        secondCategoryView?.layer.masksToBounds = true
+        secondCategoryView?.layer.cornerRadius = secondCategoryView!.frame.width/14.0
     }
 }
