@@ -35,7 +35,6 @@ class HomeViewController: UIViewController {
         cardHourLabel?.textColor = ColorConstant.shared.cardHourColor
         todayLabel?.textColor = ColorConstant.shared.cardBackgroundColor
         seeAllButton?.tintColor = ColorConstant.shared.cardBackgroundColor
-        
     }
     
     func setupCardView() {

@@ -24,4 +24,6 @@ class ColorConstant {
     
     let RasionProjectViewColor = UIColor(rgb: 0xF5EEFC)
     let RasionProjectLabelColor = UIColor(rgb: 0x9B51E0)
+    
+    let pauseAndQuitButtonsColor = UIColor(rgb: 0xE9E9FF)
 }

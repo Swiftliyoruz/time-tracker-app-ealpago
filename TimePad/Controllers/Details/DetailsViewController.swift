@@ -23,6 +23,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIColors()
+        setupButtons()
     }
     
     func setupUIColors() {
@@ -31,7 +32,16 @@ class DetailsViewController: UIViewController {
         secondCategoryLabel?.textColor = UIColor.black
         projectHourLabel?.textColor = UIColor.black
         pauseLabel?.textColor = UIColor.black
+        pauseView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
         quitLabel?.textColor = UIColor.black
+        quitView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
+    }
+    
+    func setupButtons() {
+        pauseView?.layer.cornerRadius = pauseView!.frame.size.height / 2
+        pauseView?.clipsToBounds = true
+        quitView?.layer.cornerRadius = quitView!.frame.size.height / 2
+        quitView?.clipsToBounds = true
     }
     
 }

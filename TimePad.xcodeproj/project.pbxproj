@@ -139,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				D1E3A8EB28CCAFB5002BD071 /* TimePad */,
+				D1CD47B028CCE7CD003EB7A0 /* Extensions */,
+				D1E3A94528CCE5D3002BD071 /* Constants */,
+				D1E3A92F28CCDDA5002BD071 /* Fonts */,
 				D1E3A90228CCAFB7002BD071 /* TimePadTests */,
 				D1E3A90C28CCAFB7002BD071 /* TimePadUITests */,
 				D1E3A8EA28CCAFB5002BD071 /* Products */,
@@ -158,11 +161,8 @@
 		D1E3A8EB28CCAFB5002BD071 /* TimePad */ = {
 			isa = PBXGroup;
 			children = (
-				D1CD47B328CF85BF003EB7A0 /* TableViewCell */,
-				D1CD47B028CCE7CD003EB7A0 /* Extensions */,
-				D1E3A94528CCE5D3002BD071 /* Constants */,
-				D1E3A92F28CCDDA5002BD071 /* Fonts */,
 				D1E3A91D28CCCB6D002BD071 /* Controllers */,
+				D1CD47B328CF85BF003EB7A0 /* TableViewCell */,
 				D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */,
 				D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */,
 				D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */,
