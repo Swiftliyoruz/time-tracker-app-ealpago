@@ -35,6 +35,7 @@ class DetailsViewController: UIViewController {
         pauseView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
         quitLabel?.textColor = UIColor.black
         quitView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
+        firstCategoryLabel?.textColor = ColorConstant.shared.workCategoryLabelColor
     }
     
     func setupButtons() {
@@ -43,5 +44,4 @@ class DetailsViewController: UIViewController {
         quitView?.layer.cornerRadius = quitView!.frame.size.height / 2
         quitView?.clipsToBounds = true
     }
-    
 }

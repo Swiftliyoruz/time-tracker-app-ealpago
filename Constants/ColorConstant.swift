@@ -5,7 +5,6 @@
 //  Created by Emre Alpago on 10.09.2022.
 //
 
-import Foundation
 import UIKit
 
 class ColorConstant {

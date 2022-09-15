@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private var todayLabel: UILabel?
     @IBOutlet private var seeAllButton: UIButton?
     @IBOutlet private var workTableView: UITableView?
+    @IBOutlet private var cardButton: UIButton?
     
     let cellSpacingHeight: CGFloat = 16.0
     
@@ -48,6 +49,11 @@ class HomeViewController: UIViewController {
         workTableView?.delegate = self
         workTableView?.register(UINib(nibName: TableViewConstant.shared.cellNibName, bundle: nil), forCellReuseIdentifier: TableViewConstant.shared.cellReusIdentifier)
     }
+    
+    @IBAction func cardButtonTapped(_ sender: UIButton) {
+        print("tapped")
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
