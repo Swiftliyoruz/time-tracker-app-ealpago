@@ -103,7 +103,7 @@
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-lk-uOT">
                                                                 <rect key="frame" x="0.0" y="76" width="60" height="84.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -121,7 +121,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNx-J9-d9j">
                                                 <rect key="frame" x="226" y="0.0" width="140" height="160.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mIv-wR-gu5" userLabel="Quit Stack View">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mIv-wR-gu5" userLabel="Quit Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="160.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZG-1p-xe0">
@@ -130,8 +130,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ka-ZS-1ig">
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" image="square.fill" catalog="system">
+                                                                        <state key="normal">
                                                                             <color key="titleColor" red="0.94805478629999995" green="0.94805478629999995" blue="0.94805478629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <imageReference key="image" image="square.fill" catalog="system" symbolScale="medium"/>
                                                                         </state>
                                                                     </button>
                                                                 </subviews>
@@ -147,8 +148,8 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Al-sS-ztM">
-                                                                <rect key="frame" x="0.0" y="60" width="60" height="100.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="76" width="60" height="84.5"/>
+                                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>

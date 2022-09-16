@@ -188,6 +188,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellButton" destination="zT1-N4-ZVl" id="vxx-q9-eIv"/>
                 <outlet property="cellStackView" destination="0ko-vW-VxU" id="A5h-NF-whp"/>
                 <outlet property="cellTimeLabel" destination="D6v-yZ-4e0" id="XMU-Eq-Pof"/>
                 <outlet property="cellTitleLabel" destination="RqS-6Y-NXt" id="TqD-xc-jHj"/>

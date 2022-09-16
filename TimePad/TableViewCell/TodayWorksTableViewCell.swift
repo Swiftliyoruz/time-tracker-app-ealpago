@@ -16,6 +16,7 @@ class TodayWorksTableViewCell: UITableViewCell {
     @IBOutlet private weak var cellTimeLabel: UILabel!
     @IBOutlet private weak var firstCategoryView: UIView!
     @IBOutlet private weak var secondCategoryView: UIView!
+    @IBOutlet private weak var cellButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +32,8 @@ class TodayWorksTableViewCell: UITableViewCell {
     func setupColor() {
         cellStackView.backgroundColor = .white
         cellTitleLabel.textColor = .black
-        cellTimeLabel.textColor = ColorConstants.cellHourColor
+        cellTimeLabel.textColor = ColorConstants.cellHourAndButtonColor
+        cellButton.tintColor = ColorConstants.cellHourAndButtonColor
         firstCategoryView.backgroundColor = ColorConstants.workTagColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
         secondCategoryView.backgroundColor = ColorConstants.cellProjectTagColor

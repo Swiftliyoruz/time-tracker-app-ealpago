@@ -14,7 +14,7 @@ enum ColorConstants {
     static let titlesColor = UIColor(named: "TitlesColor")
     
     static let cellButtonColor = UIColor(named: "CellButtonColor")
-    static let cellHourColor = UIColor(named: "CellHourColor")
+    static let cellHourAndButtonColor = UIColor(named: "CellHourColor")
     static let workTagColor = UIColor(named: "WorkTagColor")
     static let workTextColor = UIColor(named: "WorkTextColor")
     static let personelTagColor = UIColor(named: "PersonalTagColor")

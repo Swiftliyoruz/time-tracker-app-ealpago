@@ -27,14 +27,16 @@ class DetailsViewController: UIViewController {
     }
     
     func setupUIColors() {
-        projectNameLabel?.textColor = UIColor.black
-        firstCategoryLabel?.textColor = UIColor.black
-        secondCategoryLabel?.textColor = UIColor.black
-        projectHourLabel?.textColor = UIColor.black
+        projectNameLabel?.textColor = ColorConstants.detailsLabelColor
+        firstCategoryLabel?.textColor = ColorConstants.workTextColor
+        secondCategoryLabel?.textColor = ColorConstants.detailsLabelColor
+        projectHourLabel?.textColor = ColorConstants.detailsLabelColor
         pauseLabel?.textColor = UIColor.black
         quitLabel?.textColor = UIColor.black
         pauseView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        pauseButton?.tintColor = ColorConstants.pauseAndQuitIconColor
         quitView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        quitButton?.tintColor = ColorConstants.pauseAndQuitIconColor
         firstCategoryLabel?.textColor = ColorConstants.workTextColor
     }
     
