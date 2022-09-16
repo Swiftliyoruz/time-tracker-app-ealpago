@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16F251228D4A6CA0072B55A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16F251128D4A6CA0072B55A /* Color.xcassets */; };
 		D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */; };
 		D1CD47B228CCE7E6003EB7A0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */; };
 		D1CD47B628CF85FD003EB7A0 /* TodayWorksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D16F251128D4A6CA0072B55A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		D1CD47B128CCE7E6003EB7A0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */,
 				D1E3A8F228CCAFB5002BD071 /* Main.storyboard */,
 				D1E3A8F528CCAFB7002BD071 /* Assets.xcassets */,
+				D16F251128D4A6CA0072B55A /* Color.xcassets */,
 				D1E3A8F728CCAFB7002BD071 /* LaunchScreen.storyboard */,
 				D1E3A8FA28CCAFB7002BD071 /* Info.plist */,
 			);
@@ -383,6 +386,7 @@
 				D1E3A92828CCCBDD002BD071 /* AddStoryboard.storyboard in Resources */,
 				D1E3A94328CCDDB3002BD071 /* Rubik-Regular.ttf in Resources */,
 				D1E3A93E28CCDDB3002BD071 /* Rubik-Medium.ttf in Resources */,
+				D16F251228D4A6CA0072B55A /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
