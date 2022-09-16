@@ -9,13 +9,13 @@ import UIKit
 
 class TodayWorksTableViewCell: UITableViewCell {
     
-    @IBOutlet private var mainStackView: UIStackView?
-    @IBOutlet private var workTitleLabel: UILabel?
-    @IBOutlet private var firstCategoryLabel: UILabel?
-    @IBOutlet private var secondCategoryLabel: UILabel?
-    @IBOutlet private var workTimeLabel: UILabel?
-    @IBOutlet private var firstCategoryView: UIView?
-    @IBOutlet private var secondCategoryView: UIView?
+    @IBOutlet private weak var mainStackView: UIStackView!
+    @IBOutlet private weak var workTitleLabel: UILabel!
+    @IBOutlet private weak var firstCategoryLabel: UILabel!
+    @IBOutlet private weak var secondCategoryLabel: UILabel!
+    @IBOutlet private weak var workTimeLabel: UILabel!
+    @IBOutlet private weak var firstCategoryView: UIView!
+    @IBOutlet private weak var secondCategoryView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,25 +30,25 @@ class TodayWorksTableViewCell: UITableViewCell {
     }
     
     func setupColor() {
-        mainStackView?.backgroundColor = UIColor.white
-        workTitleLabel?.textColor = ColorConstant.shared.tableViewCellWorkTitleTextColor
-        workTimeLabel?.textColor = ColorConstant.shared.tableViewWorkHourTextColor
+        mainStackView.backgroundColor = UIColor.white
+        workTitleLabel.textColor = ColorConstant.shared.tableViewCellWorkTitleTextColor
+        workTimeLabel.textColor = ColorConstant.shared.tableViewWorkHourTextColor
         
-        firstCategoryView?.backgroundColor = ColorConstant.shared.workCategoryViewColor
-        firstCategoryLabel?.textColor = ColorConstant.shared.workCategoryLabelColor
+        firstCategoryView.backgroundColor = ColorConstant.shared.workCategoryViewColor
+        firstCategoryLabel.textColor = ColorConstant.shared.workCategoryLabelColor
         
-        secondCategoryView?.backgroundColor = ColorConstant.shared.RasionProjectViewColor
-        secondCategoryLabel?.textColor = ColorConstant.shared.RasionProjectLabelColor
+        secondCategoryView.backgroundColor = ColorConstant.shared.RasionProjectViewColor
+        secondCategoryLabel.textColor = ColorConstant.shared.RasionProjectLabelColor
     }
     
     func setupCellView() {
-        mainStackView?.layer.masksToBounds = true
-        mainStackView?.layer.cornerRadius = mainStackView!.frame.width/30.0
+        mainStackView.layer.masksToBounds = true
+        mainStackView.layer.cornerRadius = mainStackView.frame.width/30.0
         
-        firstCategoryView?.layer.masksToBounds = true
-        firstCategoryView?.layer.cornerRadius = firstCategoryView!.frame.width/8.0
+        firstCategoryView.layer.masksToBounds = true
+        firstCategoryView.layer.cornerRadius = firstCategoryView.frame.width/8.0
         
-        secondCategoryView?.layer.masksToBounds = true
-        secondCategoryView?.layer.cornerRadius = secondCategoryView!.frame.width/14.0
+        secondCategoryView.layer.masksToBounds = true
+        secondCategoryView.layer.cornerRadius = secondCategoryView.frame.width/14.0
     }
 }
