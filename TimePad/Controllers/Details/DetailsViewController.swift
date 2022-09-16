@@ -32,10 +32,10 @@ class DetailsViewController: UIViewController {
         secondCategoryLabel?.textColor = UIColor.black
         projectHourLabel?.textColor = UIColor.black
         pauseLabel?.textColor = UIColor.black
-        pauseView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
         quitLabel?.textColor = UIColor.black
-        quitView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
-        firstCategoryLabel?.textColor = ColorConstant.shared.workCategoryLabelColor
+        pauseView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        quitView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        firstCategoryLabel?.textColor = ColorConstants.workTextColor
     }
     
     func setupButtons() {

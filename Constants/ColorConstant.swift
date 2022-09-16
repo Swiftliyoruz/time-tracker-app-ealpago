@@ -21,12 +21,9 @@ enum ColorConstants {
     static let personelTextColor = UIColor(named: "PersonalTextColor")
     static let cellProjectTagColor = UIColor(named: "CellProjectTagColor")
     static let cellProjectTextColor = UIColor(named: "CellProjectTextColor")
+    
+    static let pauseAndQuitButtonColor = UIColor(named: "Pause&QuitButtonColor")
+    static let pauseAndQuitIconColor = UIColor(named: "Pause&QuitIconColor")
+    static let detailsLabelColor = UIColor(named: "DetailsLabelsColor")
 }
 
-class ColorConstant {
-    static let shared = ColorConstant()
-
-    let workCategoryLabelColor = UIColor(rgb: 0xFD5B71)
-  
-    let pauseAndQuitButtonsColor = UIColor(rgb: 0xE9E9FF)
-}
