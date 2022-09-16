@@ -10,6 +10,9 @@ import UIKit
 enum Constant {
     static let tableViewData = 10
     static let cellSpacingHeight: CGFloat = 16.0
+    static let cellNibName = "TodayWorksTableViewCell"
+    static let cellReusIdentifier = "TodayWorksTableViewCell"
+
 }
 
 class HomeViewController: UIViewController {
@@ -54,7 +57,7 @@ class HomeViewController: UIViewController {
     func setupTableView() {
         workTableView.dataSource = self
         workTableView.delegate = self
-        workTableView.register(UINib(nibName: TableViewConstant.shared.cellNibName, bundle: nil), forCellReuseIdentifier: TableViewConstant.shared.cellReusIdentifier)
+        workTableView.register(UINib(nibName: Constant.cellNibName, bundle: nil), forCellReuseIdentifier: Constant.cellReusIdentifier)
     }
     
     @IBAction func cardButtonTapped(_ sender: UIButton) {
@@ -72,7 +75,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstant.shared.cellReusIdentifier, for: indexPath) as! TodayWorksTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.cellReusIdentifier, for: indexPath) as! TodayWorksTableViewCell
         return cell
     }
 }
