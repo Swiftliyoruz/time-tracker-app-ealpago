@@ -9,15 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet private var taskLabel: UILabel?
-    @IBOutlet private var moreButton: UIButton?
-    @IBOutlet private var cardView: UIView?
-    @IBOutlet private var cardHourLabel: UILabel?
-    @IBOutlet private var cardDetailsButton: UIButton?
-    @IBOutlet private var todayLabel: UILabel?
-    @IBOutlet private var seeAllButton: UIButton?
-    @IBOutlet private var workTableView: UITableView?
-    @IBOutlet private var cardButton: UIButton?
+    @IBOutlet private weak var taskLabel: UILabel!
+    @IBOutlet private weak var moreButton: UIButton!
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var cardHourLabel: UILabel!
+    @IBOutlet private weak var cardDetailsButton: UIButton!
+    @IBOutlet private weak var todayLabel: UILabel!
+    @IBOutlet private weak var seeAllButton: UIButton!
+    @IBOutlet private weak var workTableView: UITableView!
+    @IBOutlet private weak var cardButton: UIButton!
     
     let cellSpacingHeight: CGFloat = 16.0
     
@@ -39,15 +39,15 @@ class HomeViewController: UIViewController {
     }
     
     func setupCardView() {
-        cardView?.layer.masksToBounds = true
-        cardView?.layer.cornerRadius = cardView!.frame.width/30.0
-        cardView?.layer.borderWidth = 0.3
+        cardView.layer.masksToBounds = true
+        cardView.layer.cornerRadius = cardView.frame.width/30.0
+        cardView.layer.borderWidth = 0.3
     }
     
     func setupTableView() {
-        workTableView?.dataSource = self
-        workTableView?.delegate = self
-        workTableView?.register(UINib(nibName: TableViewConstant.shared.cellNibName, bundle: nil), forCellReuseIdentifier: TableViewConstant.shared.cellReusIdentifier)
+        workTableView.dataSource = self
+        workTableView.delegate = self
+        workTableView.register(UINib(nibName: TableViewConstant.shared.cellNibName, bundle: nil), forCellReuseIdentifier: TableViewConstant.shared.cellReusIdentifier)
     }
     
     @IBAction func cardButtonTapped(_ sender: UIButton) {
