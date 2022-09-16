@@ -33,12 +33,13 @@ class HomeViewController: UIViewController {
     }
     
     func setupColor() {
-        view.backgroundColor = ColorConstant.shared.mainBackgroundColor
-        cardView?.backgroundColor = ColorConstant.shared.cardBackgroundColor
-        taskLabel?.textColor = ColorConstant.shared.titleTextColor
-        cardHourLabel?.textColor = ColorConstant.shared.cardHourColor
-        todayLabel?.textColor = ColorConstant.shared.cardBackgroundColor
-        seeAllButton?.tintColor = ColorConstant.shared.cardBackgroundColor
+        view.backgroundColor = ColorConstants.mainBackgrounColor
+        cardView.backgroundColor = ColorConstants.timerCardColor
+        taskLabel.textColor = ColorConstants.titlesColor
+        cardHourLabel.textColor = ColorConstants.timerCardLabelsColor
+        todayLabel.textColor = ColorConstants.titlesColor
+        seeAllButton.tintColor = ColorConstants.titlesColor
+        moreButton.tintColor = ColorConstants.moreButtonColor
     }
     
     func setupCardView() {
