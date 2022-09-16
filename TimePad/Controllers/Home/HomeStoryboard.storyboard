@@ -140,7 +140,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title=""/>
                                                         <connections>
                                                             <action selector="cardButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KzN-cJ-cgn"/>
                                                         </connections>
@@ -218,6 +218,7 @@
                         <outlet property="cardButton" destination="Ki4-cR-STd" id="k9R-FY-dGZ"/>
                         <outlet property="cardDetailsButton" destination="fbf-RO-ihB" id="RMg-0o-MSe"/>
                         <outlet property="cardHourLabel" destination="3S9-qK-ZfA" id="QGQ-nr-yMk"/>
+                        <outlet property="cardProjectNameLabel" destination="RZR-6x-PZz" id="xDU-6G-Nxz"/>
                         <outlet property="cardView" destination="Nmd-Qp-RWm" id="QzR-Er-830"/>
                         <outlet property="moreButton" destination="u56-jo-bqc" id="Nmc-Gl-cEK"/>
                         <outlet property="seeAllButton" destination="6AJ-i1-ANM" id="Lzd-e4-kJE"/>

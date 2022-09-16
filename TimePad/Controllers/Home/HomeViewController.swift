@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardButton: UIButton!
+    @IBOutlet private weak var cardProjectNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,9 @@ class HomeViewController: UIViewController {
         view.backgroundColor = ColorConstants.mainBackgrounColor
         cardView.backgroundColor = ColorConstants.timerCardColor
         taskLabel.textColor = ColorConstants.titlesColor
-        cardHourLabel.textColor = ColorConstants.timerCardLabelsColor
+        cardHourLabel.textColor = .white
+        cardDetailsButton.tintColor = .white
+        cardProjectNameLabel.textColor = .white
         todayLabel.textColor = ColorConstants.titlesColor
         seeAllButton.tintColor = ColorConstants.titlesColor
         moreButton.tintColor = ColorConstants.moreButtonColor
