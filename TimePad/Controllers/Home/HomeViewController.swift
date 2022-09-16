@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum Constant {
+    static let tableViewData = 10
+    static let cellSpacingHeight: CGFloat = 16.0
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet private weak var taskLabel: UILabel!
@@ -18,8 +23,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardButton: UIButton!
-    
-    let cellSpacingHeight: CGFloat = 16.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,16 +56,15 @@ class HomeViewController: UIViewController {
     @IBAction func cardButtonTapped(_ sender: UIButton) {
         print("tapped")
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        Constant.tableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
+        Constant.cellSpacingHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
