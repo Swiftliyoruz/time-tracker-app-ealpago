@@ -27,23 +27,23 @@ class DetailsViewController: UIViewController {
     }
     
     func setupUIColors() {
-        projectNameLabel?.textColor = ColorConstants.detailsLabelColor
-        firstCategoryLabel?.textColor = ColorConstants.workTextColor
-        secondCategoryLabel?.textColor = ColorConstants.detailsLabelColor
-        projectHourLabel?.textColor = ColorConstants.detailsLabelColor
-        pauseLabel?.textColor = UIColor.black
-        quitLabel?.textColor = UIColor.black
-        pauseView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
-        pauseButton?.tintColor = ColorConstants.pauseAndQuitIconColor
-        quitView?.backgroundColor = ColorConstants.pauseAndQuitButtonColor
-        quitButton?.tintColor = ColorConstants.pauseAndQuitIconColor
-        firstCategoryLabel?.textColor = ColorConstants.workTextColor
+        projectNameLabel.textColor = ColorConstants.detailsLabelColor
+        firstCategoryLabel.textColor = ColorConstants.workTextColor
+        secondCategoryLabel.textColor = ColorConstants.detailsLabelColor
+        projectHourLabel.textColor = ColorConstants.detailsLabelColor
+        pauseLabel.textColor = UIColor.black
+        quitLabel.textColor = UIColor.black
+        pauseView.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        pauseButton.tintColor = ColorConstants.pauseAndQuitIconColor
+        quitView.backgroundColor = ColorConstants.pauseAndQuitButtonColor
+        quitButton.tintColor = ColorConstants.pauseAndQuitIconColor
+        firstCategoryLabel.textColor = ColorConstants.workTextColor
     }
     
     func setupButtons() {
-        pauseView?.layer.cornerRadius = pauseView!.frame.size.height / 2
-        pauseView?.clipsToBounds = true
-        quitView?.layer.cornerRadius = quitView!.frame.size.height / 2
-        quitView?.clipsToBounds = true
+        pauseView.layer.cornerRadius = pauseView.frame.size.height / 2
+        pauseView.clipsToBounds = true
+        quitView.layer.cornerRadius = quitView.frame.size.height / 2
+        quitView.clipsToBounds = true
     }
 }
