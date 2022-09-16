@@ -9,16 +9,16 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    @IBOutlet private var projectNameLabel: UILabel?
-    @IBOutlet private var firstCategoryLabel: UILabel?
-    @IBOutlet private var secondCategoryLabel: UILabel?
-    @IBOutlet private var projectHourLabel: UILabel?
-    @IBOutlet private var pauseLabel: UILabel?
-    @IBOutlet private var pauseView: UIView?
-    @IBOutlet private var pauseButton: UIButton?
-    @IBOutlet private var quitLabel: UILabel?
-    @IBOutlet private var quitView: UIView?
-    @IBOutlet private var quitButton: UIButton?
+    @IBOutlet private var projectNameLabel: UILabel!
+    @IBOutlet private var firstCategoryLabel: UILabel!
+    @IBOutlet private var secondCategoryLabel: UILabel!
+    @IBOutlet private var projectHourLabel: UILabel!
+    @IBOutlet private var pauseLabel: UILabel!
+    @IBOutlet private var pauseView: UIView!
+    @IBOutlet private var pauseButton: UIButton!
+    @IBOutlet private var quitLabel: UILabel!
+    @IBOutlet private var quitView: UIView!
+    @IBOutlet private var quitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
