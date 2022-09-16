@@ -9,15 +9,18 @@ import UIKit
 
 enum ColorConstants {
     static let mainBackgrounColor = UIColor(named: "MainAppColor")
-    static let cellButtonColor = UIColor(named: "CellButtonColor")
-    static let cellHourColor = UIColor(named: "CellHourColor")
     static let moreButtonColor = UIColor(named: "MoreButtonCollor")
-    static let personelTagColor = UIColor(named: "PersonalTagColor")
-    static let personelTextColor = UIColor(named: "PersonalTextColor")
-    static let workTagColor = UIColor(named: "WorkTagColor")
-    static let workTextColor = UIColor(named: "WorkTextColor")
     static let timerCardColor = UIColor(named: "TimerCardColor")
     static let titlesColor = UIColor(named: "TitlesColor")
+    
+    static let cellButtonColor = UIColor(named: "CellButtonColor")
+    static let cellHourColor = UIColor(named: "CellHourColor")
+    static let workTagColor = UIColor(named: "WorkTagColor")
+    static let workTextColor = UIColor(named: "WorkTextColor")
+    static let personelTagColor = UIColor(named: "PersonalTagColor")
+    static let personelTextColor = UIColor(named: "PersonalTextColor")
+    static let cellProjectTagColor = UIColor(named: "CellProjectTagColor")
+    static let cellProjectTextColor = UIColor(named: "CellProjectTextColor")
 }
 
 class ColorConstant {

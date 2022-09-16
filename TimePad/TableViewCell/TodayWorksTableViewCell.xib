@@ -188,13 +188,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellStackView" destination="0ko-vW-VxU" id="A5h-NF-whp"/>
+                <outlet property="cellTimeLabel" destination="D6v-yZ-4e0" id="XMU-Eq-Pof"/>
+                <outlet property="cellTitleLabel" destination="RqS-6Y-NXt" id="TqD-xc-jHj"/>
                 <outlet property="firstCategoryLabel" destination="cH3-xU-1MT" id="cjV-xW-ohp"/>
                 <outlet property="firstCategoryView" destination="UjF-0g-2GI" id="N4I-D2-pP4"/>
-                <outlet property="mainStackView" destination="0ko-vW-VxU" id="A5h-NF-whp"/>
                 <outlet property="secondCategoryLabel" destination="yiI-Lg-yge" id="d3e-Be-r7H"/>
                 <outlet property="secondCategoryView" destination="sX5-hd-qfp" id="BQl-9c-FIS"/>
-                <outlet property="workTimeLabel" destination="D6v-yZ-4e0" id="XMU-Eq-Pof"/>
-                <outlet property="workTitleLabel" destination="RqS-6Y-NXt" id="TqD-xc-jHj"/>
             </connections>
             <point key="canvasLocation" x="170.28985507246378" y="139.62053571428569"/>
         </tableViewCell>

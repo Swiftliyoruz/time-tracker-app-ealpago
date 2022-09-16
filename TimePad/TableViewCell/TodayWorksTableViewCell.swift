@@ -9,11 +9,11 @@ import UIKit
 
 class TodayWorksTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var mainStackView: UIStackView!
-    @IBOutlet private weak var workTitleLabel: UILabel!
+    @IBOutlet private weak var cellStackView: UIStackView!
+    @IBOutlet private weak var cellTitleLabel: UILabel!
     @IBOutlet private weak var firstCategoryLabel: UILabel!
     @IBOutlet private weak var secondCategoryLabel: UILabel!
-    @IBOutlet private weak var workTimeLabel: UILabel!
+    @IBOutlet private weak var cellTimeLabel: UILabel!
     @IBOutlet private weak var firstCategoryView: UIView!
     @IBOutlet private weak var secondCategoryView: UIView!
     
@@ -26,24 +26,21 @@ class TodayWorksTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
     func setupColor() {
-        mainStackView.backgroundColor = UIColor.white
-        workTitleLabel.textColor = ColorConstant.shared.tableViewCellWorkTitleTextColor
-        workTimeLabel.textColor = ColorConstant.shared.tableViewWorkHourTextColor
-        
-        firstCategoryView.backgroundColor = ColorConstant.shared.workCategoryViewColor
-        firstCategoryLabel.textColor = ColorConstant.shared.workCategoryLabelColor
-        
-        secondCategoryView.backgroundColor = ColorConstant.shared.RasionProjectViewColor
-        secondCategoryLabel.textColor = ColorConstant.shared.RasionProjectLabelColor
+        cellStackView.backgroundColor = .white
+        cellTitleLabel.textColor = .black
+        cellTimeLabel.textColor = ColorConstants.cellHourColor
+        firstCategoryView.backgroundColor = ColorConstants.workTagColor
+        firstCategoryLabel.textColor = ColorConstants.workTextColor
+        secondCategoryView.backgroundColor = ColorConstants.cellProjectTagColor
+        secondCategoryLabel.textColor = ColorConstants.cellProjectTextColor
     }
     
     func setupCellView() {
-        mainStackView.layer.masksToBounds = true
-        mainStackView.layer.cornerRadius = mainStackView.frame.width/30.0
+        cellStackView.layer.masksToBounds = true
+        cellStackView.layer.cornerRadius = cellStackView.frame.width/30.0
         
         firstCategoryView.layer.masksToBounds = true
         firstCategoryView.layer.cornerRadius = firstCategoryView.frame.width/8.0
