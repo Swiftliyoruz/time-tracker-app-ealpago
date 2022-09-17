@@ -54,9 +54,9 @@ class BaseTabBarController: UITabBarController {
         var viewControllers:[UIViewController] = []
         // TODO: Generic storyBoard ViewController al
         // let storyBoard = UIStoryboard(name: , bundle: nil)
-        items.forEach { TabbarItemType in
+        items.forEach { tabbarItemType in
             var vc = UIViewController()
-            switch TabbarItemType {
+            switch tabbarItemType {
             case .home:
                 vc = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             case .add:
@@ -64,7 +64,7 @@ class BaseTabBarController: UITabBarController {
             case .pie:
                 vc = UIStoryboard(name: "DetailsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
             }
-            let tabbarItem = UITabBarItem(title: nil, image: TabbarItemType.image(), selectedImage: TabbarItemType.selectedImage())
+            let tabbarItem = UITabBarItem(title: nil, image: tabbarItemType.image(), selectedImage: tabbarItemType.selectedImage())
             vc.tabBarItem = tabbarItem
             viewControllers.append(vc)
         }
