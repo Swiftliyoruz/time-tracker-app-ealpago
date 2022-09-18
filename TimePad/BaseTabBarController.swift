@@ -38,7 +38,7 @@ final class BaseTabBarController: UITabBarController {
     
     var items: [TabbarItemType] {
         get {
-            return [.home, .add ,.pie]
+            return [.home, .add, .pie]
         }
     }
     
