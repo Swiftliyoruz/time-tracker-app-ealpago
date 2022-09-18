@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NfG-fU-aee" userLabel="Main Stack View">
-                                <rect key="frame" x="24" y="94" width="366" height="718"/>
+                                <rect key="frame" x="24" y="98" width="366" height="714"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RC4-MZ-sf3" userLabel="Top Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="57"/>
@@ -52,11 +53,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-Zi-iNL" userLabel="Category Name Stack View">
                                                 <rect key="frame" x="0.0" y="40" width="366" height="17"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="Ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-LX-uSa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="EllipseSVG" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-LX-uSa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="17"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1c-zR-JLn">
-                                                        <rect key="frame" x="24" y="0.0" width="342" height="17"/>
+                                                        <rect key="frame" x="28" y="0.0" width="338" height="17"/>
                                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -66,12 +67,12 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:32:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-50-77H">
-                                        <rect key="frame" x="0.0" y="57" width="366" height="500.5"/>
+                                        <rect key="frame" x="0.0" y="57" width="366" height="496.5"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="48"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-NY-vb4" userLabel="Pause Quit Stack View">
-                                        <rect key="frame" x="0.0" y="557.5" width="366" height="160.5"/>
+                                        <rect key="frame" x="0.0" y="553.5" width="366" height="160.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dn0-RA-lyK">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="160.5"/>
@@ -86,7 +87,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal">
-                                                                            <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                                                                            <imageReference key="image" image="pauseSVG" symbolScale="large"/>
                                                                         </state>
                                                                     </button>
                                                                 </subviews>
@@ -132,7 +133,7 @@
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal">
                                                                             <color key="titleColor" red="0.94805478629999995" green="0.94805478629999995" blue="0.94805478629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <imageReference key="image" image="square.fill" catalog="system" symbolScale="medium"/>
+                                                                            <imageReference key="image" image="quitSVG" symbolScale="medium"/>
                                                                         </state>
                                                                     </button>
                                                                 </subviews>
@@ -200,9 +201,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Ellipse" width="12" height="12"/>
-        <image name="pause.fill" catalog="system" width="116" height="128"/>
-        <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="EllipseSVG" width="16" height="16"/>
+        <image name="pauseSVG" width="24" height="24"/>
+        <image name="quitSVG" width="24" height="24"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
