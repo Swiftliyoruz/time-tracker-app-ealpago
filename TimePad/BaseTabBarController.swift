@@ -34,7 +34,7 @@ enum TabbarItemType {
 }
 
 
-class BaseTabBarController: UITabBarController {
+final class BaseTabBarController: UITabBarController {
     
     var items: [TabbarItemType] {
         get {
