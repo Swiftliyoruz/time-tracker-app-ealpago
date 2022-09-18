@@ -51,7 +51,7 @@ final class BaseTabBarController: UITabBarController {
     }
     
     func setupTabBar() {
-        var viewControllers:[UIViewController] = []
+        var viewControllers = [UIViewController]()
         // TODO: Generic storyBoard ViewController al
         // let storyBoard = UIStoryboard(name: , bundle: nil)
         items.forEach { tabbarItemType in
