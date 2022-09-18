@@ -13,22 +13,28 @@ enum TabbarItemType {
     var image: UIImage {
         switch self {
         case .home:
-            return UIImage(named: "time")!
+            guard let homeImage = UIImage(named: "time") else { return UIImage(named: "wrongIcon")! }
+            return homeImage
         case .add:
-            return UIImage(named: "add")!
+            guard let addImage = UIImage(named: "add") else { return UIImage(named: "wrongIcon")! }
+            return addImage
         case .pie:
-            return UIImage(named: "pie")!
+            guard let pieImage = UIImage(named: "pie") else { return UIImage(named: "wrongIcon")! }
+            return pieImage
         }
     }
     
     var selectedImage: UIImage {
         switch self {
         case .home:
-            return UIImage(named: "time_Selected")!
+            guard let homeImage = UIImage(named: "time_Selected") else { return UIImage(named: "wrongIcon")! }
+            return homeImage
         case .add:
-            return UIImage(named: "add_Selected")!
+            guard let addImage = UIImage(named: "add_Selected") else { return UIImage(named: "wrongIcon")! }
+            return addImage
         case .pie:
-            return UIImage(named: "pie_Selected")!
+            guard let pieImage = UIImage(named: "pie_Selected") else { return UIImage(named: "wrongIcon")! }
+            return pieImage
         }
     }
 }
