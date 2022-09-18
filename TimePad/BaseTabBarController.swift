@@ -10,7 +10,7 @@ import UIKit
 enum TabbarItemType {
     case home, add, pie
     
-    func image() -> UIImage {
+    var image: UIImage {
         switch self {
         case .home:
             return UIImage(named: "time")!
@@ -21,7 +21,7 @@ enum TabbarItemType {
         }
     }
     
-    func selectedImage() -> UIImage {
+    var selectedImage: UIImage {
         switch self {
         case .home:
             return UIImage(named: "time_Selected")!
@@ -64,7 +64,7 @@ final class BaseTabBarController: UITabBarController {
             case .pie:
                 vc = UIStoryboard(name: "DetailsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
             }
-            let tabbarItem = UITabBarItem(title: nil, image: tabbarItemType.image(), selectedImage: tabbarItemType.selectedImage())
+            let tabbarItem = UITabBarItem(title: nil, image: tabbarItemType.image, selectedImage: tabbarItemType.selectedImage)
             vc.tabBarItem = tabbarItem
             viewControllers.append(vc)
         }
