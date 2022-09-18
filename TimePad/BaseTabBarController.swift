@@ -13,13 +13,13 @@ enum TabbarItemType {
     var image: UIImage {
         switch self {
         case .home:
-            guard let homeImage = UIImage(named: "time") else { return UIImage(named: "wrongIcon")! }
+            guard let homeImage = UIImage(named: "timeSVG") else { return UIImage(named: "wrongIcon")! }
             return homeImage
         case .add:
-            guard let addImage = UIImage(named: "add") else { return UIImage(named: "wrongIcon")! }
+            guard let addImage = UIImage(named: "addSVG") else { return UIImage(named: "wrongIcon")! }
             return addImage
         case .pie:
-            guard let pieImage = UIImage(named: "pie") else { return UIImage(named: "wrongIcon")! }
+            guard let pieImage = UIImage(named: "pieSVG") else { return UIImage(named: "wrongIcon")! }
             return pieImage
         }
     }
@@ -27,13 +27,13 @@ enum TabbarItemType {
     var selectedImage: UIImage {
         switch self {
         case .home:
-            guard let homeImage = UIImage(named: "time_Selected") else { return UIImage(named: "wrongIcon")! }
+            guard let homeImage = UIImage(named: "selectedTimeSVG") else { return UIImage(named: "wrongIcon")! }
             return homeImage
         case .add:
-            guard let addImage = UIImage(named: "add_Selected") else { return UIImage(named: "wrongIcon")! }
+            guard let addImage = UIImage(named: "selectedAddSVG") else { return UIImage(named: "wrongIcon")! }
             return addImage
         case .pie:
-            guard let pieImage = UIImage(named: "pie_Selected") else { return UIImage(named: "wrongIcon")! }
+            guard let pieImage = UIImage(named: "selectedPieSVG") else { return UIImage(named: "wrongIcon")! }
             return pieImage
         }
     }
