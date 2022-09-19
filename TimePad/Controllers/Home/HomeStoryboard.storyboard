@@ -91,6 +91,9 @@
                                                                                 <color key="tintColor" red="0.94805478629999995" green="0.94805478629999995" blue="0.94805478629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="cardRightArrowSVG"/>
+                                                                                <connections>
+                                                                                    <action selector="cardDetailsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OEk-Ah-WBz"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,15 +140,6 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki4-cR-STd" userLabel="Card Button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=""/>
-                                                        <connections>
-                                                            <action selector="cardButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KzN-cJ-cgn"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="labelColor"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
@@ -153,11 +147,7 @@
                                                     <constraint firstItem="g74-Bi-vv6" firstAttribute="top" secondItem="Nmd-Qp-RWm" secondAttribute="top" id="1q9-dp-Jug"/>
                                                     <constraint firstAttribute="trailing" secondItem="g74-Bi-vv6" secondAttribute="trailing" id="JPD-c8-9TU"/>
                                                     <constraint firstItem="g74-Bi-vv6" firstAttribute="leading" secondItem="Nmd-Qp-RWm" secondAttribute="leading" id="MFd-en-F8M"/>
-                                                    <constraint firstItem="Ki4-cR-STd" firstAttribute="leading" secondItem="Nmd-Qp-RWm" secondAttribute="leading" id="Wtb-cC-SnN"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ki4-cR-STd" secondAttribute="bottom" id="afq-4j-HF9"/>
-                                                    <constraint firstItem="Ki4-cR-STd" firstAttribute="top" secondItem="Nmd-Qp-RWm" secondAttribute="top" id="bOH-Jn-rua"/>
                                                     <constraint firstAttribute="height" constant="114" id="eQ9-RA-Mag"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ki4-cR-STd" secondAttribute="trailing" id="mfk-fe-1FM"/>
                                                     <constraint firstAttribute="bottom" secondItem="g74-Bi-vv6" secondAttribute="bottom" id="pyQ-wV-Rsi"/>
                                                 </constraints>
                                             </view>
@@ -168,19 +158,19 @@
                                         <rect key="frame" x="0.0" y="194" width="374" height="546"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fv7-Dk-qsz">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwx-9g-lQT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="46"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="50"/>
                                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Hy-Lm9">
-                                                        <rect key="frame" x="57.5" y="0.0" width="236" height="46"/>
+                                                        <rect key="frame" x="57.5" y="0.0" width="236" height="50"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AJ-i1-ANM">
-                                                        <rect key="frame" x="293.5" y="0.0" width="80.5" height="46"/>
+                                                        <rect key="frame" x="293.5" y="0.0" width="80.5" height="50"/>
                                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="See All"/>
@@ -189,7 +179,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hFu-vi-2z7">
-                                                <rect key="frame" x="0.0" y="58" width="374" height="488"/>
+                                                <rect key="frame" x="0.0" y="62" width="374" height="484"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,7 +206,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="2ny-om-2oa"/>
                     <connections>
-                        <outlet property="cardButton" destination="Ki4-cR-STd" id="k9R-FY-dGZ"/>
                         <outlet property="cardDetailsButton" destination="fbf-RO-ihB" id="RMg-0o-MSe"/>
                         <outlet property="cardHourLabel" destination="3S9-qK-ZfA" id="QGQ-nr-yMk"/>
                         <outlet property="cardProjectNameLabel" destination="RZR-6x-PZz" id="xDU-6G-Nxz"/>
@@ -230,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="90.401785714285708"/>
+            <point key="canvasLocation" x="1952.1739130434785" y="90.401785714285708"/>
         </scene>
     </scenes>
     <resources>

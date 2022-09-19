@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
-    @IBOutlet private weak var cardButton: UIButton!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -60,9 +59,13 @@ class HomeViewController: UIViewController {
         workTableView.register(UINib(nibName: Constant.cellNibName, bundle: nil), forCellReuseIdentifier: Constant.cellReusIdentifier)
     }
     
-    @IBAction func cardButtonTapped(_ sender: UIButton) {
-        print("tapped")
+    @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
+//        let detailsVC  = DetailsViewController()
+//        present(detailsVC, animated: true, completion: nil)
+//        print("Tapped")
     }
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
