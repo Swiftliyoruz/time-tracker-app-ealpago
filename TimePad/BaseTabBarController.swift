@@ -61,10 +61,10 @@ final class BaseTabBarController: UITabBarController {
             var tabBarVC = UIViewController()
             switch tabbarItemType {
             case .home:
-                tabBarVC = UIStoryboard(
+                tabBarVC = (UIStoryboard(
                     name: TabBarConstant.homeStoryBoardName,
                     bundle: nil).instantiateViewController(
-                        withIdentifier: TabBarConstant.homeStoryBoardID) as! HomeViewController
+                        withIdentifier: TabBarConstant.homeStoryBoardID) as! HomeViewController)
             case .add:
                 tabBarVC = UIStoryboard(
                     name: TabBarConstant.addStoryBoardName,

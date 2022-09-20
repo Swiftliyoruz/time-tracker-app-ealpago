@@ -57,9 +57,9 @@ class HomeViewController: UIViewController {
             forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
     }
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
-        //        let detailsVC  = DetailsViewController()
-        //        present(detailsVC, animated: true, completion: nil)
-        //        print("Tapped")
+                let cardDetailsVC  = CardDetailsViewController()
+                present(cardDetailsVC, animated: true, completion: nil)
+                print("Tapped")
     }
 }
 
