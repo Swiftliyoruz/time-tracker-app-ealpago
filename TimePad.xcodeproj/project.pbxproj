@@ -272,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1E3A91328CCAFB7002BD071 /* Build configuration list for PBXNativeTarget "TimePad" */;
 			buildPhases = (
+				D1089D6328D9C0DB00AB81D2 /* Run SwiftLint */,
 				D1E3A8E528CCAFB4002BD071 /* Sources */,
 				D1E3A8E628CCAFB4002BD071 /* Frameworks */,
 				D1E3A8E728CCAFB4002BD071 /* Resources */,
@@ -406,6 +407,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1089D6328D9C0DB00AB81D2 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1E3A8E528CCAFB4002BD071 /* Sources */ = {
