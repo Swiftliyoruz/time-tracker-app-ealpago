@@ -8,7 +8,6 @@
 import UIKit
 
 class ProjectButtonDetailsViewController: UIViewController {
-    
     @IBOutlet private var projectNameLabel: UILabel?
     @IBOutlet private var firstCategoryLabel: UILabel?
     @IBOutlet private var secondCategoryLabel: UILabel?
@@ -19,13 +18,11 @@ class ProjectButtonDetailsViewController: UIViewController {
     @IBOutlet private var quitLabel: UILabel?
     @IBOutlet private var quitView: UIView?
     @IBOutlet private var quitButton: UIButton?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIColors()
         setupButtons()
     }
-    
     func setupUIColors() {
         projectNameLabel?.textColor = UIColor.black
         firstCategoryLabel?.textColor = UIColor.black
@@ -36,7 +33,6 @@ class ProjectButtonDetailsViewController: UIViewController {
         quitLabel?.textColor = UIColor.black
         quitView?.backgroundColor = ColorConstant.shared.pauseAndQuitButtonsColor
     }
-    
     func setupButtons() {
         pauseView?.layer.cornerRadius = pauseView!.frame.size.height / 2
         pauseView?.clipsToBounds = true

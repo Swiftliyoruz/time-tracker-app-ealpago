@@ -9,7 +9,6 @@ import Foundation
 
 class TableViewConstant {
     static let shared = TableViewConstant()
-    
     let cellNibName = "TodayWorksTableViewCell"
     let cellReusIdentifier = "TodayWorksTableViewCell"
 }

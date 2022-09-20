@@ -9,7 +9,6 @@ import UIKit
 
 enum TabbarItemType {
     case home, add, pie
-    
     var image: UIImage {
         switch self {
         case .home:
@@ -23,7 +22,6 @@ enum TabbarItemType {
             return pieImage
         }
     }
-    
     var selectedImage: UIImage {
         switch self {
         case .home:
@@ -39,22 +37,18 @@ enum TabbarItemType {
     }
 }
 
-
 final class BaseTabBarController: UITabBarController {
-    
     var items: [TabbarItemType] {
         get {
             return [.home, .add, .pie]
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().tintColor = .black
     }
-    
     func setupTabBar() {
         var viewControllers = [UIViewController]()
         items.forEach { tabbarItemType in
@@ -74,4 +68,3 @@ final class BaseTabBarController: UITabBarController {
         setViewControllers(viewControllers, animated: true)
     }
 }
-
