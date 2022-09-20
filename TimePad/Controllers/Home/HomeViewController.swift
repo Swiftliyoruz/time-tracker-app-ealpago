@@ -52,14 +52,14 @@ class HomeViewController: UIViewController {
         workTableView.dataSource = self
         workTableView.delegate = self
         workTableView.register(UINib(
-                nibName: Constant.cellNibName,
-                bundle: nil),
-                forCellReuseIdentifier: Constant.cellReusIdentifier)
+            nibName: Constant.cellNibName,
+            bundle: nil),
+                               forCellReuseIdentifier: Constant.cellReusIdentifier)
     }
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
-//        let detailsVC  = DetailsViewController()
-//        present(detailsVC, animated: true, completion: nil)
-//        print("Tapped")
+        //        let detailsVC  = DetailsViewController()
+        //        present(detailsVC, animated: true, completion: nil)
+        //        print("Tapped")
     }
 }
 
@@ -71,9 +71,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         Constant.cellSpacingHeight
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
+        if let cell = tableView.dequeueReusableCell(
             withIdentifier: Constant.cellReusIdentifier,
-            for: indexPath) as! TodayWorksTableViewCell
-        return cell
+            for: indexPath) as? TodayWorksTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
     }
 }
