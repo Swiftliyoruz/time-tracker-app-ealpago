@@ -4,8 +4,16 @@
 //
 //  Created by Emre Alpago on 10.09.2022.
 //
-
 import UIKit
+
+enum TabBarConstant {
+    static let homeStoryBoardName = "HomeStoryboard"
+    static let homeStoryBoardID = "HomeViewController"
+    static let addStoryBoardName = "AddStoryboard"
+    static let addStoryBoardID = "AddViewController"
+    static let detailsStoryBoardName = "DetailsStoryboard"
+    static let detailsStoryBoardID = "DetailsViewController"
+}
 
 enum TabbarItemType {
     case home, add, pie
@@ -39,7 +47,7 @@ enum TabbarItemType {
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-            return [.home, .add, .pie]
+        return [.home, .add, .pie]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +62,19 @@ final class BaseTabBarController: UITabBarController {
             switch tabbarItemType {
             case .home:
                 tabBarVC = UIStoryboard(
-                    name: "HomeStoryboard",
+                    name: TabBarConstant.homeStoryBoardName,
                     bundle: nil).instantiateViewController(
-                        withIdentifier: "HomeViewController")as! HomeViewController
+                        withIdentifier: TabBarConstant.homeStoryBoardID) as! HomeViewController
             case .add:
                 tabBarVC = UIStoryboard(
-                    name: "AddStoryboard",
+                    name: TabBarConstant.addStoryBoardName,
                     bundle: nil).instantiateViewController(
-                        withIdentifier: "AddViewController") as! AddViewController
+                        withIdentifier: TabBarConstant.addStoryBoardID) as! AddViewController
             case .pie:
                 tabBarVC = UIStoryboard(
-                    name: "DetailsStoryboard",
-                    bundle: nil).instantiateViewController
-                (withIdentifier: "DetailsViewController") as! DetailsViewController
+                    name: TabBarConstant.detailsStoryBoardName,
+                    bundle: nil).instantiateViewController(
+                        withIdentifier: TabBarConstant.detailsStoryBoardID) as! DetailsViewController
             }
             let tabbarItem = UITabBarItem(title: nil,
                                           image: tabbarItemType.image,
