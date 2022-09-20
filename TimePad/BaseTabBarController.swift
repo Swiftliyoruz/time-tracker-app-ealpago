@@ -39,9 +39,7 @@ enum TabbarItemType {
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-        get {
             return [.home, .add, .pie]
-        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +50,29 @@ final class BaseTabBarController: UITabBarController {
     func setupTabBar() {
         var viewControllers = [UIViewController]()
         items.forEach { tabbarItemType in
-            var vc = UIViewController()
+            var tabBarVC = UIViewController()
             switch tabbarItemType {
             case .home:
-                vc = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                tabBarVC = UIStoryboard(
+                    name: "HomeStoryboard",
+                    bundle: nil).instantiateViewController(
+                        withIdentifier: "HomeViewController")as! HomeViewController
             case .add:
-                vc = UIStoryboard(name: "AddStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+                tabBarVC = UIStoryboard(
+                    name: "AddStoryboard",
+                    bundle: nil).instantiateViewController(
+                        withIdentifier: "AddViewController") as! AddViewController
             case .pie:
-                vc = UIStoryboard(name: "DetailsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+                tabBarVC = UIStoryboard(
+                    name: "DetailsStoryboard",
+                    bundle: nil).instantiateViewController
+                (withIdentifier: "DetailsViewController") as! DetailsViewController
             }
-            let tabbarItem = UITabBarItem(title: nil, image: tabbarItemType.image, selectedImage: tabbarItemType.selectedImage)
-            vc.tabBarItem = tabbarItem
-            viewControllers.append(vc)
+            let tabbarItem = UITabBarItem(title: nil,
+                                          image: tabbarItemType.image,
+                                          selectedImage: tabbarItemType.selectedImage)
+            tabBarVC.tabBarItem = tabbarItem
+            viewControllers.append(tabBarVC)
         }
         setViewControllers(viewControllers, animated: true)
     }
