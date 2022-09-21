@@ -144,6 +144,12 @@
                             <constraint firstItem="B0t-t9-Q3f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kTf-CB-0RX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="MRb-wo-SwD" id="AOM-I1-sol"/>
+                        <outlet property="mainCategoryButton" destination="rZ7-0z-j7q" id="3Ow-pe-xAD"/>
+                        <outlet property="projectNameTextField" destination="5Lb-oG-Mlx" id="Y0N-o9-cjH"/>
+                        <outlet property="secondCategoryButton" destination="cWV-ik-0dY" id="wDK-yK-S6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
