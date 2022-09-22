@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum MainCategories {
+    static let work = "Work"
+    static let personal = "Personal"
+}
+
 class AddViewController: UIViewController {
 
     @IBOutlet weak var projectNameTextField: UITextField!
@@ -14,8 +19,20 @@ class AddViewController: UIViewController {
     @IBOutlet weak var secondCategoryButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupMainCategoryButton()
     }
+
+    func setupMainCategoryButton() {
+        let printClosure = {(action : UIAction ) in
+            print(action.title)
+        }
+
+        mainCategoryButton.menu = UIMenu(children: [
+            UIAction(title: MainCategories.work, handler: printClosure),
+            UIAction(title: MainCategories.personal, handler: printClosure)
+        ])
+    }
+
 }

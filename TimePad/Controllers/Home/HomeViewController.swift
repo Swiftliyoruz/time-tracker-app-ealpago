@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
         setupCardView()
         setupTableView()
     }
+
     func setupColor() {
         view.backgroundColor = ColorConstants.mainBackgrounColor
         cardView.backgroundColor = ColorConstants.timerCardColor
@@ -44,6 +46,7 @@ class HomeViewController: UIViewController {
         seeAllButton.tintColor = ColorConstants.titlesColor
         moreButton.tintColor = ColorConstants.moreButtonColor
     }
+
     func setupCardView() {
         cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = cardView.frame.width/30.0
@@ -53,10 +56,11 @@ class HomeViewController: UIViewController {
         workTableView.dataSource = self
         workTableView.delegate = self
         workTableView.register(UINib(
-            nibName: HomeVCConstant.cellNibName,
+        nibName: HomeVCConstant.cellNibName,
             bundle: nil),
                                forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
     }
+
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: HomeVCConstant.cardDetailsStoryBoardName, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: HomeVCConstant.cardDetailsStoryBoardID)
@@ -65,6 +69,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         HomeVCConstant.tableViewData
@@ -80,4 +85,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
 }
