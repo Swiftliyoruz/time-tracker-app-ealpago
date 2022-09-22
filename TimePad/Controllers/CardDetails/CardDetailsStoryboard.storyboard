@@ -185,12 +185,12 @@
                     <connections>
                         <outlet property="firstCategoryLabel" destination="2Sh-29-zFa" id="alP-va-8ar"/>
                         <outlet property="pauseButton" destination="mVh-T9-nns" id="yqZ-ll-eV5"/>
-                        <outlet property="pauseLabel" destination="wxz-yv-rOa" id="r9c-YN-WEU"/>
+                        <outlet property="pauseLabel" destination="wxz-yv-rOa" id="tCh-HP-Q5A"/>
                         <outlet property="pauseView" destination="IEc-ey-GKk" id="H2Y-tT-cN3"/>
                         <outlet property="projectHourLabel" destination="Den-B6-KJd" id="92U-cE-CFL"/>
                         <outlet property="projectNameLabel" destination="iet-iu-5mw" id="LCo-Ew-JWI"/>
                         <outlet property="quitButton" destination="gXj-N3-VDb" id="jPl-y0-8OL"/>
-                        <outlet property="quitLabel" destination="IwB-Wz-xfD" id="OrY-Uq-C6k"/>
+                        <outlet property="quitLabel" destination="IwB-Wz-xfD" id="4b0-0V-hOv"/>
                         <outlet property="quitView" destination="zGE-6k-niP" id="Owf-Hx-KCZ"/>
                         <outlet property="secondCategoryLabel" destination="jRE-WX-C91" id="5Qd-Zp-zl8"/>
                     </connections>

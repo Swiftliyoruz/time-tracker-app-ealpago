@@ -12,7 +12,8 @@ enum HomeVCConstant {
     static let cellSpacingHeight: CGFloat = 16.0
     static let cellNibName = "TodayWorksTableViewCell"
     static let cellReusIdentifier = "TodayWorksTableViewCell"
-
+    static let cardDetailsStoryBoardName = "CardDetailsStoryboard"
+    static let cardDetailsStoryBoardID = "CardDetailsViewController"
 }
 
 class HomeViewController: UIViewController {
@@ -54,12 +55,13 @@ class HomeViewController: UIViewController {
         workTableView.register(UINib(
             nibName: HomeVCConstant.cellNibName,
             bundle: nil),
-            forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
+                               forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
     }
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
-                let cardDetailsVC  = CardDetailsViewController()
-                present(cardDetailsVC, animated: true, completion: nil)
-                print("Tapped")
+        let storyboard = UIStoryboard(name: HomeVCConstant.cardDetailsStoryBoardName, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: HomeVCConstant.cardDetailsStoryBoardID)
+        self.present(vc, animated: true, completion: nil)
+        print("CardDetailsButtonTapped")
     }
 }
 
