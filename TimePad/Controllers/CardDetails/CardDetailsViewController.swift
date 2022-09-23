@@ -24,6 +24,7 @@ class CardDetailsViewController: UIViewController {
         setupUIColors()
         setupButtons()
     }
+
     func setupUIColors() {
         projectNameLabel.textColor = ColorConstants.detailsLabelColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
@@ -37,6 +38,7 @@ class CardDetailsViewController: UIViewController {
         quitButton.tintColor = ColorConstants.pauseAndQuitIconColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
     }
+    
     func setupButtons() {
         pauseView.layer.cornerRadius = pauseView.frame.size.height / 2
         pauseView.clipsToBounds = true

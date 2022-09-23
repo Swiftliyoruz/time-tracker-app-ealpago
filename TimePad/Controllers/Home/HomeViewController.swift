@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
         cardView.layer.cornerRadius = cardView.frame.width/30.0
         cardView.layer.borderWidth = 0.3
     }
+    
     func setupTableView() {
         workTableView.dataSource = self
         workTableView.delegate = self
@@ -74,9 +75,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         HomeVCConstant.tableViewData
     }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         HomeVCConstant.cellSpacingHeight
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: HomeVCConstant.cellReusIdentifier,

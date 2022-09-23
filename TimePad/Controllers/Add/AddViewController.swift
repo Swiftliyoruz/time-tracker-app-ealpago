@@ -25,6 +25,7 @@ class AddViewController: UIViewController {
     }
 
     func setupMainCategoryButton() {
+        
         let printClosure = {(action : UIAction ) in
             print(action.title)
         }

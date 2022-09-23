@@ -18,11 +18,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var quitLabel: UILabel!
     @IBOutlet private weak var quitView: UIView!
     @IBOutlet private weak var quitButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIColors()
         setupButtons()
     }
+
     func setupUIColors() {
         projectNameLabel.textColor = ColorConstants.detailsLabelColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
@@ -36,6 +38,7 @@ class DetailsViewController: UIViewController {
         quitButton.tintColor = ColorConstants.pauseAndQuitIconColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
     }
+
     func setupButtons() {
         pauseView.layer.cornerRadius = pauseView.frame.size.height / 2
         pauseView.clipsToBounds = true
