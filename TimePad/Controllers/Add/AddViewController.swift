@@ -41,6 +41,9 @@ class AddViewController: UIViewController {
             UIAction(title: MainCategories.work, handler: printClosure),
             UIAction(title: MainCategories.personal, handler: printClosure)
         ])
+
+        mainCategoryButton.showsMenuAsPrimaryAction = true
+        mainCategoryButton.changesSelectionAsPrimaryAction = true
     }
 }
 
