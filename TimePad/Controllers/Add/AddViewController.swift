@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum MainCategories {
     static let work = "Work"
@@ -18,6 +19,8 @@ class AddViewController: UIViewController {
     @IBOutlet weak var mainCategoryButton: UIButton!
     @IBOutlet weak var secondCategoryTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
+
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +55,22 @@ class AddViewController: UIViewController {
         secondCategoryTextField.autocapitalizationType = .words
         secondCategoryTextField.autocorrectionType = .no
         secondCategoryTextField.delegate = self
+    }
+
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+
+        let newTask = Task(context: self.context)
+
+        newTask.projectLabel = projectNameTextField.text
+        newTask.secondCategory = secondCategoryTextField.text
+        newTask.mainCategory = mainCategoryButton.currentTitle
+
+        do {
+            try self.context.save()
+        }
+        catch {
+        }
+        print(newTask.self)
     }
 }
 
