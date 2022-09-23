@@ -23,6 +23,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         setupMainCategoryButton()
         setupProjectNameTextField()
+        setupSecondCategoryTextField()
     }
 
     func setupProjectNameTextField() {
@@ -44,6 +45,13 @@ class AddViewController: UIViewController {
 
         mainCategoryButton.showsMenuAsPrimaryAction = true
         mainCategoryButton.changesSelectionAsPrimaryAction = true
+    }
+
+    func setupSecondCategoryTextField() {
+        secondCategoryTextField.returnKeyType = .done
+        secondCategoryTextField.autocapitalizationType = .words
+        secondCategoryTextField.autocorrectionType = .no
+        secondCategoryTextField.delegate = self
     }
 }
 
