@@ -22,10 +22,17 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMainCategoryButton()
+        setupProjectNameTextField()
+    }
+
+    func setupProjectNameTextField() {
+        projectNameTextField.returnKeyType = .done
+        projectNameTextField.autocapitalizationType = .words
+        projectNameTextField.autocorrectionType = .no
+        projectNameTextField.delegate = self
     }
 
     func setupMainCategoryButton() {
-        
         let printClosure = {(action : UIAction ) in
             print(action.title)
         }
@@ -35,5 +42,14 @@ class AddViewController: UIViewController {
             UIAction(title: MainCategories.personal, handler: printClosure)
         ])
     }
+}
 
+extension AddViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let textFieldText = textField.text {
+            print(textFieldText)
+        }
+        return true
+    }
 }
