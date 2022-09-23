@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum HomeVCConstant {
     static let tableViewData = 10
@@ -26,6 +27,8 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
+    var taskArray:[Task]?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class HomeViewController: UIViewController {
         setupColor()
         setupCardView()
         setupTableView()
+        fetchTask()
     }
 
     func setupColor() {
@@ -57,9 +61,18 @@ class HomeViewController: UIViewController {
         workTableView.dataSource = self
         workTableView.delegate = self
         workTableView.register(UINib(
-        nibName: HomeVCConstant.cellNibName,
+            nibName: HomeVCConstant.cellNibName,
             bundle: nil),
                                forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
+    }
+
+    func fetchTask() {
+        do {
+            self.taskArray = try context.fetch(Task.fetchRequest())
+        }
+        catch {
+
+        }
     }
 
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
