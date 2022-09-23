@@ -16,7 +16,7 @@ class AddViewController: UIViewController {
 
     @IBOutlet weak var projectNameTextField: UITextField!
     @IBOutlet weak var mainCategoryButton: UIButton!
-    @IBOutlet weak var secondCategoryButton: UIButton!
+    @IBOutlet weak var secondCategoryTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
 
     override func viewDidLoad() {
