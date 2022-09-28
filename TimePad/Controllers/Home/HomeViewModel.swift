@@ -17,7 +17,7 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 //MARK: - HomeViewModelInterface
-protocol HomeViewModelInterfaceDelegate {
+protocol HomeViewModelInterface {
     var delegate: HomeViewModelDelegate? { get set }
 
     var numberOfRowsInSection: Int { get }
@@ -37,5 +37,40 @@ private extension HomeViewModel {
 
 //MARK: - HomeViewModel
 final class HomeViewModel {
+    weak var delegate: HomeViewModelDelegate?
 
+    // Data
+    var taskArray: [Task]?
+    //Data manipulation
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    func fetchTask() {
+        do {
+            self.taskArray = try context.fetch(Task.fetchRequest())
+        }
+        catch {
+            print("error")
+        }
+    }
+}
+
+extension HomeViewModel: HomeViewModelInterface {
+    var numberOfRowsInSection: Int {
+        Constant.tableViewData
+    }
+
+    var heightForHeaderInSection: Double {
+        Constant.cellSpacingHeight
+    }
+
+    func viewDidLoad() {
+        delegate?.setupColor()
+        delegate?.setupCardView()
+        delegate?.setupTableView()
+        fetchTask()
+    }
+
+    func cardDetailsButtonTapped() {
+        delegate?.presentCardDetails()
+    }
 }
