@@ -27,12 +27,16 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
-    var taskArray:[Task]?
+
+    // Data
+    var taskArray: [Task]?
+    //Data manipulation
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //Initial setup
         setupColor()
         setupCardView()
         setupTableView()
@@ -71,7 +75,7 @@ class HomeViewController: UIViewController {
             self.taskArray = try context.fetch(Task.fetchRequest())
         }
         catch {
-
+            print("error")
         }
     }
 
@@ -101,5 +105,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
 }
