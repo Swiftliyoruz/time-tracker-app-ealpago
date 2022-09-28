@@ -28,21 +28,53 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
 
-    // Data
-    var taskArray: [Task]?
-    //Data manipulation
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //Initial setup
-        setupColor()
-        setupCardView()
-        setupTableView()
-        fetchTask()
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
     }
 
+    @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
+        viewModel.cardDetailsButtonTapped()
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRowsInSection
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        viewModel.heightForHeaderInSection
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(
+            withIdentifier: HomeVCConstant.cellReusIdentifier,
+            for: indexPath) as? TodayWorksTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
+    }
+}
+
+//MARK: - HomeViewModelDelegate
+extension HomeViewController: HomeViewModelDelegate {
+    func setupTableView() {
+        workTableView.dataSource = self
+        workTableView.delegate = self
+        workTableView.register(UINib(
+            nibName: HomeVCConstant.cellNibName,
+            bundle: nil),
+                               forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
+    }
+    
     func setupColor() {
         view.backgroundColor = ColorConstants.mainBackgrounColor
         cardView.backgroundColor = ColorConstants.timerCardColor
@@ -60,49 +92,11 @@ class HomeViewController: UIViewController {
         cardView.layer.cornerRadius = cardView.frame.width/30.0
         cardView.layer.borderWidth = 0.3
     }
-    
-    func setupTableView() {
-        workTableView.dataSource = self
-        workTableView.delegate = self
-        workTableView.register(UINib(
-            nibName: HomeVCConstant.cellNibName,
-            bundle: nil),
-                               forCellReuseIdentifier: HomeVCConstant.cellReusIdentifier)
-    }
 
-    func fetchTask() {
-        do {
-            self.taskArray = try context.fetch(Task.fetchRequest())
-        }
-        catch {
-            print("error")
-        }
-    }
-
-    @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
+    func presentCardDetails() {
         let storyboard = UIStoryboard(name: HomeVCConstant.cardDetailsStoryBoardName, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: HomeVCConstant.cardDetailsStoryBoardID)
         self.present(vc, animated: true, completion: nil)
         print("CardDetailsButtonTapped")
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        HomeVCConstant.tableViewData
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        HomeVCConstant.cellSpacingHeight
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(
-            withIdentifier: HomeVCConstant.cellReusIdentifier,
-            for: indexPath) as? TodayWorksTableViewCell {
-            return cell
-        }
-        return UITableViewCell()
     }
 }

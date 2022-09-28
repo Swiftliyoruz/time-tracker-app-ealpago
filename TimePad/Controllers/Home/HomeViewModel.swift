@@ -54,6 +54,7 @@ final class HomeViewModel {
     }
 }
 
+//MARK: - HomeViewModel extensions
 extension HomeViewModel: HomeViewModelInterface {
     var numberOfRowsInSection: Int {
         Constant.tableViewData
