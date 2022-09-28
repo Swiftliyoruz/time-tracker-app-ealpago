@@ -8,6 +8,7 @@
 import Foundation
 import class UIKit.UIApplication
 
+//MARK: - HomeViewModelDelegate
 protocol HomeViewModelDelegate: AnyObject {
     func setupColor()
     func setupCardView()
@@ -16,7 +17,7 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 //MARK: - HomeViewModelInterface
-protocol HomeViewModelInterface {
+protocol HomeViewModelInterfaceDelegate {
     var delegate: HomeViewModelDelegate? { get set }
 
     var numberOfRowsInSection: Int { get }
