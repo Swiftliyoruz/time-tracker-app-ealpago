@@ -27,6 +27,15 @@ protocol HomeViewModelInterfaceDelegate {
     func cardDetailsButtonTapped()
 }
 
+//MARK: - Constant
+private extension HomeViewModel {
+    enum Constant {
+        static let tableViewData = 10
+        static let cellSpacingHeight: Double = 16.0
+    }
+}
+
+//MARK: - HomeViewModel
 final class HomeViewModel {
 
 }
