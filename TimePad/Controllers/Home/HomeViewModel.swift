@@ -39,9 +39,7 @@ private extension HomeViewModel {
 final class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
 
-    // Data
     var taskArray: [Task]?
-    //Data manipulation
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     func fetchTask() {

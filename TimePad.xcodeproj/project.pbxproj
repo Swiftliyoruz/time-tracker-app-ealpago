@@ -182,7 +182,6 @@
 			children = (
 				D16B409A28DC807E00392B29 /* CoreDataModels */,
 				D1E3A91D28CCCB6D002BD071 /* Controllers */,
-				D1CD47B328CF85BF003EB7A0 /* TableViewCell */,
 				D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */,
 				D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */,
 				D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */,
@@ -230,6 +229,7 @@
 				D18F483728E4B97600911A05 /* HomeViewModel.swift */,
 				D1E3A92128CCCBAA002BD071 /* HomeViewController.swift */,
 				D1E3A92328CCCBB7002BD071 /* HomeStoryboard.storyboard */,
+				D1CD47B328CF85BF003EB7A0 /* TableViewCell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
