@@ -94,9 +94,6 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
     func presentCardDetails() {
-        let storyboard = UIStoryboard(name: HomeVCConstant.cardDetailsStoryBoardName, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: HomeVCConstant.cardDetailsStoryBoardID)
-        self.present(vc, animated: true, completion: nil)
-        print("CardDetailsButtonTapped")
+        viewModel.delegate?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)
     }
 }

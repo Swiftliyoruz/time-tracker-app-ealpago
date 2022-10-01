@@ -9,7 +9,7 @@ import Foundation
 import class UIKit.UIApplication
 
 //MARK: - HomeViewModelDelegate
-protocol HomeViewModelDelegate: AnyObject {
+protocol HomeViewModelDelegate: AnyObject, Presentable {
     func setupColor()
     func setupCardView()
     func setupTableView()
