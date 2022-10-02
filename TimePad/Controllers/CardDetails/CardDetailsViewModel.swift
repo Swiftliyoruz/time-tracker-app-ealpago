@@ -9,7 +9,7 @@ import Foundation
 
 protocol CardDetailsViewModelInterface {
     var view: CardDetailsViewInterface? { get set }
-    
+
     func viewDidLoad()
 }
 
@@ -23,5 +23,4 @@ extension CardDetailsViewModel: CardDetailsViewModelInterface {
         view?.setupButtons()
     }
 }
-
 

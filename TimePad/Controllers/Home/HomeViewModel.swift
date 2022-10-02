@@ -55,7 +55,8 @@ final class HomeViewModel {
 //MARK: - HomeViewModel extensions
 extension HomeViewModel: HomeViewModelInterface {
     var numberOfRowsInSection: Int {
-        Constant.tableViewData
+        guard let taskCount = taskArray?.count else { return Constant.tableViewData }
+        return taskCount
     }
 
     var heightForHeaderInSection: Double {

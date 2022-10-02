@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				D17B408728DA04B100E37C3D /* CardDetailsViewController.swift */,
-				D17B408928DA04C100E37C3D /* CardDetailsStoryboard.storyboard */,
 				D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */,
+				D17B408928DA04C100E37C3D /* CardDetailsStoryboard.storyboard */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -258,8 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				D1E3A92928CCCBE9002BD071 /* DetailsViewController.swift */,
-				D1E3A92B28CCCBF5002BD071 /* DetailsStoryboard.storyboard */,
 				D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */,
+				D1E3A92B28CCCBF5002BD071 /* DetailsStoryboard.storyboard */,
 			);
 			path = Details;
 			sourceTree = "<group>";
