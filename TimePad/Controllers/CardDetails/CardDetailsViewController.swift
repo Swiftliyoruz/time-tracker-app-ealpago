@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol CardDetailsViewInterface: AnyObject {
+    func setupUIColors()
+    func setupButtons()
+}
+
 class CardDetailsViewController: UIViewController {
     @IBOutlet weak var secondCategoryLabel: UILabel!
     @IBOutlet weak var firstCategoryLabel: UILabel!
@@ -19,12 +24,16 @@ class CardDetailsViewController: UIViewController {
     @IBOutlet weak var pauseLabel: UILabel!
     @IBOutlet weak var quitLabel: UILabel!
 
+    private lazy var viewModel = CardDetailsViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUIColors()
-        setupButtons()
+        viewModel.view = self
+        viewModel.viewDidLoad()
     }
+}
 
+extension CardDetailsViewController: CardDetailsViewInterface {
     func setupUIColors() {
         projectNameLabel.textColor = ColorConstants.detailsLabelColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
@@ -38,7 +47,7 @@ class CardDetailsViewController: UIViewController {
         quitButton.tintColor = ColorConstants.pauseAndQuitIconColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
     }
-    
+
     func setupButtons() {
         pauseView.layer.cornerRadius = pauseView.frame.size.height / 2
         pauseView.clipsToBounds = true
