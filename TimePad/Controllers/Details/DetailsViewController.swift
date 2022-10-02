@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DetailsViewInterface: AnyObject {
+    func setupUIColors()
+    func setupButtons()
+}
+
 class DetailsViewController: UIViewController {
     @IBOutlet private weak var projectNameLabel: UILabel!
     @IBOutlet private weak var firstCategoryLabel: UILabel!
@@ -18,13 +23,16 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var quitLabel: UILabel!
     @IBOutlet private weak var quitView: UIView!
     @IBOutlet private weak var quitButton: UIButton!
+
+    private lazy var viewModel = DetailsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUIColors()
-        setupButtons()
+        viewModel.viewDidLoad()
     }
+}
 
+extension DetailsViewController: DetailsViewInterface {
     func setupUIColors() {
         projectNameLabel.textColor = ColorConstants.detailsLabelColor
         firstCategoryLabel.textColor = ColorConstants.workTextColor
