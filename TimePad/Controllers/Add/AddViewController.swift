@@ -13,6 +13,13 @@ enum MainCategories {
     static let personal = "Personal"
 }
 
+protocol AddViewInterface: AnyObject {
+    func setupMainCategoryButton()
+    func setupProjectNameTextField()
+    func setupSecondCategoryTextField()
+    func addNewTask()
+}
+
 class AddViewController: UIViewController {
 
     @IBOutlet weak var projectNameTextField: UITextField!
@@ -20,20 +27,38 @@ class AddViewController: UIViewController {
     @IBOutlet weak var secondCategoryTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
 
+    private lazy var viewModel = AddViewModel()
+
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMainCategoryButton()
-        setupProjectNameTextField()
-        setupSecondCategoryTextField()
+        //move to AddViewInterface protocol
+        viewModel.view = self
+        viewModel.viewDidLoad()
     }
 
-    func setupProjectNameTextField() {
-        projectNameTextField.returnKeyType = .done
-        projectNameTextField.autocapitalizationType = .words
-        projectNameTextField.autocorrectionType = .no
-        projectNameTextField.delegate = self
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        viewModel.addButtonTapped()
+    }
+}
+
+extension AddViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let textFieldText = textField.text {
+            print(textFieldText)
+        }
+        return true
+    }
+}
+
+extension AddViewController: AddViewInterface {
+    func setupSecondCategoryTextField() {
+        secondCategoryTextField.returnKeyType = .done
+        secondCategoryTextField.autocapitalizationType = .words
+        secondCategoryTextField.autocorrectionType = .no
+        secondCategoryTextField.delegate = self
     }
 
     func setupMainCategoryButton() {
@@ -50,15 +75,14 @@ class AddViewController: UIViewController {
         mainCategoryButton.changesSelectionAsPrimaryAction = true
     }
 
-    func setupSecondCategoryTextField() {
-        secondCategoryTextField.returnKeyType = .done
-        secondCategoryTextField.autocapitalizationType = .words
-        secondCategoryTextField.autocorrectionType = .no
-        secondCategoryTextField.delegate = self
+    func setupProjectNameTextField() {
+        projectNameTextField.returnKeyType = .done
+        projectNameTextField.autocapitalizationType = .words
+        projectNameTextField.autocorrectionType = .no
+        projectNameTextField.delegate = self
     }
 
-    @IBAction func addButtonTapped(_ sender: UIButton) {
-
+    func addNewTask() {
         let newTask = Task(context: self.context)
 
         newTask.projectLabel = projectNameTextField.text
@@ -71,15 +95,5 @@ class AddViewController: UIViewController {
         catch {
         }
         print(newTask.self)
-    }
-}
-
-extension AddViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        if let textFieldText = textField.text {
-            print(textFieldText)
-        }
-        return true
     }
 }
