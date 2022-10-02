@@ -17,54 +17,87 @@ enum TabBarConstant {
 
 enum TabbarItemType {
     case home, add, pie
+
+    var name: String {
+        switch self {
+        case .home:
+            return "HomeStoryboard"
+        case .add:
+            return "AddStoryboard"
+        case .pie:
+            return "DetailsStoryboard"
+        }
+    }
+
+    var identifier: String {
+        switch self {
+        case .home:
+            return "HomeViewController"
+        case .add:
+            return "AddViewController"
+        case .pie:
+            return "DetailsViewController"
+        }
+    }
+
     var image: UIImage {
         switch self {
         case .home:
-            guard let homeImage = UIImage(named: "timeSVG") else { return UIImage(named: "wrongIcon")! }
-            return homeImage
+            return UIImage(named: "timeSVG")!
         case .add:
-            guard let addImage = UIImage(named: "addSVG") else { return UIImage(named: "wrongIcon")! }
-            return addImage
+            return UIImage(named: "addSVG")!
         case .pie:
-            guard let pieImage = UIImage(named: "pieSVG") else { return UIImage(named: "wrongIcon")! }
-            return pieImage
+            return  UIImage(named: "pieSVG")!
         }
     }
     var selectedImage: UIImage {
         switch self {
         case .home:
-            guard let homeImage = UIImage(named: "selectedTimeSVG") else { return UIImage(named: "wrongIcon")! }
-            return homeImage
+            return UIImage(named: "selectedTimeSVG")!
         case .add:
-            guard let addImage = UIImage(named: "selectedAddSVG") else { return UIImage(named: "wrongIcon")! }
-            return addImage
+            return UIImage(named: "selectedAddSVG")!
         case .pie:
-            guard let pieImage = UIImage(named: "selectedPieSVG") else { return UIImage(named: "wrongIcon")! }
-            return pieImage
+            return UIImage(named: "selectedPieSVG")!
         }
     }
 }
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-        return [.home, .add, .pie]
+        [.home, .add, .pie]
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().tintColor = .black
     }
+
     func setupTabBar() {
+        let views = items.compactMap { item in
+            let vc = UIStoryboard(name: item.name, bundle: nil).instantiateViewController(withIdentifier: item.identifier)
+
+            let tabBarItem = UITabBarItem(title: nil,
+                                          image: item.image,
+                                          selectedImage: item.selectedImage)
+            vc.tabBarItem = tabBarItem
+
+
+            return vc
+        }
+        setViewControllers(views, animated: true)
+
+        /*
         var viewControllers = [UIViewController]()
         items.forEach { tabbarItemType in
             var tabBarVC = UIViewController()
             switch tabbarItemType {
             case .home:
-                tabBarVC = (UIStoryboard(
+                tabBarVC = UIStoryboard(
                     name: TabBarConstant.homeStoryBoardName,
                     bundle: nil).instantiateViewController(
-                        withIdentifier: TabBarConstant.homeStoryBoardID) as! HomeViewController)
+                        withIdentifier: TabBarConstant.homeStoryBoardID)
             case .add:
                 tabBarVC = UIStoryboard(
                     name: TabBarConstant.addStoryBoardName,
@@ -83,5 +116,6 @@ final class BaseTabBarController: UITabBarController {
             viewControllers.append(tabBarVC)
         }
         setViewControllers(viewControllers, animated: true)
+         */
     }
 }

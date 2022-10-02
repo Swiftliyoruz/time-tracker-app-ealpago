@@ -9,11 +9,13 @@ import Foundation
 import class UIKit.UIApplication
 
 //MARK: - HomeViewModelDelegate
+//move to Controller
 protocol HomeViewModelDelegate: AnyObject, Presentable {
     func setupColor()
     func setupCardView()
     func setupTableView()
     func presentCardDetails()
+    func reloadTableViewData()
 }
 
 //MARK: - HomeViewModelInterface
@@ -36,15 +38,19 @@ private extension HomeViewModel {
 }
 
 //MARK: - HomeViewModel
+//internal
+//public - internal - open
 final class HomeViewModel {
+    //will appear
     weak var delegate: HomeViewModelDelegate?
 
-    var taskArray: [Task]?
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var taskArray: [Task]?
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    func fetchTask() {
+    private func fetchTask() {
         do {
             self.taskArray = try context.fetch(Task.fetchRequest())
+            delegate?.reloadTableViewData()
         }
         catch {
             print("error")

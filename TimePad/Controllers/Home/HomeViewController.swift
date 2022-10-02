@@ -93,6 +93,24 @@ extension HomeViewController: HomeViewModelDelegate {
         cardView.layer.borderWidth = 0.3
     }
 
+    func reloadTableViewData() { 
+        // DispatchQueue.main.async {
+        /*
+         senin bir background işlemin oldu
+         */
+
+        DispatchQueue.global(priority: .background).async {
+            // büyük calculation
+            // fetch big data
+            DispatchQueue.main.async {
+                self.workTableView.reloadData()
+            }
+        }
+        //self.workTableView.reloadData()
+        //}
+    }
+
+
     func presentCardDetails() {
         viewModel.delegate?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)
     }
