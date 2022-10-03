@@ -87,35 +87,5 @@ final class BaseTabBarController: UITabBarController {
             return vc
         }
         setViewControllers(views, animated: true)
-
-        /*
-        var viewControllers = [UIViewController]()
-        items.forEach { tabbarItemType in
-            var tabBarVC = UIViewController()
-            switch tabbarItemType {
-            case .home:
-                tabBarVC = UIStoryboard(
-                    name: TabBarConstant.homeStoryBoardName,
-                    bundle: nil).instantiateViewController(
-                        withIdentifier: TabBarConstant.homeStoryBoardID)
-            case .add:
-                tabBarVC = UIStoryboard(
-                    name: TabBarConstant.addStoryBoardName,
-                    bundle: nil).instantiateViewController(
-                        withIdentifier: TabBarConstant.addStoryBoardID) as! AddViewController
-            case .pie:
-                tabBarVC = UIStoryboard(
-                    name: TabBarConstant.detailsStoryBoardName,
-                    bundle: nil).instantiateViewController(
-                        withIdentifier: TabBarConstant.detailsStoryBoardID) as! DetailsViewController
-            }
-            let tabbarItem = UITabBarItem(title: nil,
-                                          image: tabbarItemType.image,
-                                          selectedImage: tabbarItemType.selectedImage)
-            tabBarVC.tabBarItem = tabbarItem
-            viewControllers.append(tabBarVC)
-        }
-        setViewControllers(viewControllers, animated: true)
-         */
     }
 }
