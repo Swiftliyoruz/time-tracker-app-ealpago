@@ -8,13 +8,22 @@
 import UIKit
 import CoreData
 
-enum HomeVCConstant {
-    static let tableViewData = 10
-    static let cellSpacingHeight: CGFloat = 16.0
-    static let cellNibName = "TodayWorksTableViewCell"
-    static let cellReusIdentifier = "TodayWorksTableViewCell"
-    static let cardDetailsStoryBoardName = "CardDetailsStoryboard"
-    static let cardDetailsStoryBoardID = "CardDetailsViewController"
+//MARK: - HomeViewModelDelegate
+protocol HomeViewInterface: AnyObject, Presentable {
+    func setupColor()
+    func setupCardView()
+    func setupTableView()
+    func presentCardDetails()
+    func reloadTableViewData()
+}
+
+private extension HomeViewController {
+    enum HomeVCConstant {
+        static let cellNibName = "TodayWorksTableViewCell"
+        static let cellReusIdentifier = "TodayWorksTableViewCell"
+        static let cardDetailsStoryBoardName = "CardDetailsStoryboard"
+        static let cardDetailsStoryBoardID = "CardDetailsViewController"
+    }
 }
 
 class HomeViewController: UIViewController {
@@ -32,7 +41,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        viewModel.view = self
         viewModel.viewDidLoad()
     }
 
@@ -65,7 +74,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 //MARK: - HomeViewModelDelegate
-extension HomeViewController: HomeViewModelDelegate {
+extension HomeViewController: HomeViewInterface {
     func setupTableView() {
         workTableView.dataSource = self
         workTableView.delegate = self
@@ -93,7 +102,7 @@ extension HomeViewController: HomeViewModelDelegate {
         cardView.layer.borderWidth = 0.3
     }
 
-    func reloadTableViewData() { 
+    func reloadTableViewData() {
         // DispatchQueue.main.async {
         /*
          senin bir background işlemin oldu
@@ -112,6 +121,6 @@ extension HomeViewController: HomeViewModelDelegate {
 
 
     func presentCardDetails() {
-        viewModel.delegate?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)
+        viewModel.view?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)
     }
 }

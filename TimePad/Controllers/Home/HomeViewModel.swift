@@ -8,19 +8,9 @@
 import Foundation
 import class UIKit.UIApplication
 
-//MARK: - HomeViewModelDelegate
-//move to Controller
-protocol HomeViewModelDelegate: AnyObject, Presentable {
-    func setupColor()
-    func setupCardView()
-    func setupTableView()
-    func presentCardDetails()
-    func reloadTableViewData()
-}
-
 //MARK: - HomeViewModelInterface
 protocol HomeViewModelInterface {
-    var delegate: HomeViewModelDelegate? { get set }
+    var view: HomeViewInterface? { get set }
 
     var numberOfRowsInSection: Int { get }
     var heightForHeaderInSection: Double { get }
@@ -42,7 +32,7 @@ private extension HomeViewModel {
 //public - internal - open
 final class HomeViewModel {
     //will appear
-    weak var delegate: HomeViewModelDelegate?
+    weak var view: HomeViewInterface?
 
     private var taskArray: [Task]?
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -50,7 +40,7 @@ final class HomeViewModel {
     private func fetchTask() {
         do {
             self.taskArray = try context.fetch(Task.fetchRequest())
-            delegate?.reloadTableViewData()
+            view?.reloadTableViewData()
         }
         catch {
             print("error")
@@ -70,13 +60,13 @@ extension HomeViewModel: HomeViewModelInterface {
     }
 
     func viewDidLoad() {
-        delegate?.setupColor()
-        delegate?.setupCardView()
-        delegate?.setupTableView()
+        view?.setupColor()
+        view?.setupCardView()
+        view?.setupTableView()
         fetchTask()
     }
 
     func cardDetailsButtonTapped() {
-        delegate?.presentCardDetails()
+        view?.presentCardDetails()
     }
 }
