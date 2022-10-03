@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D146901E28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */; };
 		D16B409828DC807400392B29 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B409628DC807300392B29 /* Task+CoreDataClass.swift */; };
 		D16B409928DC807400392B29 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B409728DC807400392B29 /* Task+CoreDataProperties.swift */; };
 		D16F251228D4A6CA0072B55A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16F251128D4A6CA0072B55A /* Color.xcassets */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewModelCell.swift; sourceTree = "<group>"; };
 		D16B409628DC807300392B29 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D16B409728DC807400392B29 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D16F251128D4A6CA0072B55A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */,
+				D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */,
 				D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */,
 			);
 			path = TableViewCell;
@@ -472,6 +475,7 @@
 				D17B408D28DA0A1F00E37C3D /* DataModel.xcdatamodeld in Sources */,
 				D17B408828DA04B100E37C3D /* CardDetailsViewController.swift in Sources */,
 				D19EAEF328E9953B00FF8EB0 /* DetailsViewModel.swift in Sources */,
+				D146901E28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift in Sources */,
 				D19EAEF128E9775900FF8EB0 /* AddViewModel.swift in Sources */,
 				D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */,
 				D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */,

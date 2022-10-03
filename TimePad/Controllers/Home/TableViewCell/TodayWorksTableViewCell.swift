@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol TodayWorksTableViewInterface: AnyObject {
+    func setupColor()
+    func setupCellView()
+}
+
 class TodayWorksTableViewCell: UITableViewCell {
     @IBOutlet private weak var cellStackView: UIStackView!
     @IBOutlet private weak var cellTitleLabel: UILabel!
@@ -17,17 +22,21 @@ class TodayWorksTableViewCell: UITableViewCell {
     @IBOutlet private weak var secondCategoryView: UIView!
     @IBOutlet private weak var cellButton: UIButton!
 
+    private lazy var viewModel: TodayWorksTableViewModelInterface = TodayWorksTableViewModelCell()
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setupColor()
-        setupCellView()
+        viewModel.view = self
+        viewModel.awakeFromNib()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+}
 
+extension TodayWorksTableViewCell: TodayWorksTableViewInterface {
     func setupColor() {
         cellStackView.backgroundColor = .white
         cellTitleLabel.textColor = .black
