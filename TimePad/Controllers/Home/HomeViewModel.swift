@@ -16,6 +16,7 @@ protocol HomeViewModelInterface {
     var heightForHeaderInSection: Double { get }
 
     func viewDidLoad()
+    func viewWillAppear()
     func cardDetailsButtonTapped()
 }
 
@@ -63,6 +64,10 @@ extension HomeViewModel: HomeViewModelInterface {
         view?.setupColor()
         view?.setupCardView()
         view?.setupTableView()
+        fetchTask()
+    }
+
+    func viewWillAppear() {
         fetchTask()
     }
 

@@ -44,6 +44,9 @@ class HomeViewController: UIViewController {
         viewModel.view = self
         viewModel.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewWillAppear()
+    }
 
     @IBAction func cardDetailsButtonTapped(_ sender: UIButton) {
         viewModel.cardDetailsButtonTapped()
@@ -103,22 +106,10 @@ extension HomeViewController: HomeViewInterface {
     }
 
     func reloadTableViewData() {
-        // DispatchQueue.main.async {
-        /*
-         senin bir background işlemin oldu
-         */
-
-        DispatchQueue.global(priority: .background).async {
-            // büyük calculation
-            // fetch big data
-            DispatchQueue.main.async {
-                self.workTableView.reloadData()
-            }
+        DispatchQueue.main.async {
+            self.workTableView.reloadData()
         }
-        //self.workTableView.reloadData()
-        //}
     }
-
 
     func presentCardDetails() {
         viewModel.view?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)

@@ -47,6 +47,7 @@
 		D1E3A94228CCDDB3002BD071 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */; };
 		D1E3A94328CCDDB3002BD071 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */; };
 		D1E3A94428CCDDB3002BD071 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */; };
+		D1FF965728F1B11800A78C4D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 		D1E3A90C28CCAFB7002BD071 /* TimePadUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D1FF965428F1B0F800A78C4D /* Controllers */,
 				D1E3A90D28CCAFB7002BD071 /* TimePadUITests.swift */,
 				D1E3A90F28CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift */,
 			);
@@ -300,6 +303,22 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D1FF965428F1B0F800A78C4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1FF965528F1B0FF00A78C4D /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1FF965528F1B0FF00A78C4D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,7 +399,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject "TimePad" */;
+			buildConfigurationList = D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject " " */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -506,6 +525,7 @@
 			files = (
 				D1E3A90E28CCAFB7002BD071 /* TimePadUITests.swift in Sources */,
 				D1E3A91028CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift in Sources */,
+				D1FF965728F1B11800A78C4D /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +813,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject "TimePad" */ = {
+		D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject " " */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1E3A91128CCAFB7002BD071 /* Debug */,
