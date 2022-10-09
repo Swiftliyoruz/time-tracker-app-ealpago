@@ -37,11 +37,10 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var workTableView: UITableView!
     @IBOutlet private weak var cardProjectNameLabel: UILabel!
 
-    private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
+    private lazy var viewModel: HomeViewModelInterface = HomeViewModel(view: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.view = self
         viewModel.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -67,9 +66,7 @@ extension HomeViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(
-            withIdentifier: HomeVCConstant.cellReusIdentifier,
-            for: indexPath) as? TodayWorksTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeVCConstant.cellReusIdentifier,for: indexPath) as? TodayWorksTableViewCell {
             return cell
         }
         return UITableViewCell()
@@ -110,6 +107,6 @@ extension HomeViewController: HomeViewInterface {
     }
 
     func presentCardDetails() {
-        viewModel.view?.preesent(name: HomeVCConstant.cardDetailsStoryBoardName, id: HomeVCConstant.cardDetailsStoryBoardID)
+        viewModel.cardDetailsButtonTapped()
     }
 }

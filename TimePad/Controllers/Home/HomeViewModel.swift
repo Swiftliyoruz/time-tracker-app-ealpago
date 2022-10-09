@@ -10,8 +10,6 @@ import class UIKit.UIApplication
 
 //MARK: - HomeViewModelInterface
 protocol HomeViewModelInterface {
-    var view: HomeViewInterface? { get set }
-
     var numberOfRowsInSection: Int { get }
     var heightForHeaderInSection: Double { get }
 
@@ -25,6 +23,8 @@ private extension HomeViewModel {
     enum Constant {
         static let tableViewData = 10
         static let cellSpacingHeight: Double = 16.0
+        static let cardDetailsStoryBoardName = "CardDetailsStoryboard"
+        static let cardDetailsStoryBoardID = "CardDetailsViewController"
     }
 }
 
@@ -33,10 +33,14 @@ private extension HomeViewModel {
 //public - internal - open
 final class HomeViewModel {
     //will appear
-    weak var view: HomeViewInterface?
+    private weak var view: HomeViewInterface?
 
     private var taskArray: [Task]?
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    init(view: HomeViewInterface) {
+        self.view = view
+    }
 
     private func fetchTask() {
         do {
@@ -72,6 +76,6 @@ extension HomeViewModel: HomeViewModelInterface {
     }
 
     func cardDetailsButtonTapped() {
-        view?.presentCardDetails()
+      view?.preesent(name: Constant.cardDetailsStoryBoardName, id: Constant.cardDetailsStoryBoardID)
     }
 }

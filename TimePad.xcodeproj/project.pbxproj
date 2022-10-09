@@ -213,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E3A90328CCAFB7002BD071 /* TimePadTests.swift */,
+				D1FF965428F1B0F800A78C4D /* Controllers */,
 			);
 			path = TimePadTests;
 			sourceTree = "<group>";
@@ -220,7 +221,6 @@
 		D1E3A90C28CCAFB7002BD071 /* TimePadUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D1FF965428F1B0F800A78C4D /* Controllers */,
 				D1E3A90D28CCAFB7002BD071 /* TimePadUITests.swift */,
 				D1E3A90F28CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift */,
 			);
@@ -399,7 +399,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject " " */;
+			buildConfigurationList = D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject "TimePad" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -813,7 +813,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject " " */ = {
+		D1E3A8E428CCAFB4002BD071 /* Build configuration list for PBXProject "TimePad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1E3A91128CCAFB7002BD071 /* Debug */,

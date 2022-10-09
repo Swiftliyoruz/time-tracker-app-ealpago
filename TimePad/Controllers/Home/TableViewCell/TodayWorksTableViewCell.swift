@@ -26,7 +26,6 @@ class TodayWorksTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         viewModel.view = self
         viewModel.awakeFromNib()
     }
@@ -34,9 +33,11 @@ class TodayWorksTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
 }
 
 extension TodayWorksTableViewCell: TodayWorksTableViewInterface {
+
     func setupColor() {
         cellStackView.backgroundColor = .white
         cellTitleLabel.textColor = .black
