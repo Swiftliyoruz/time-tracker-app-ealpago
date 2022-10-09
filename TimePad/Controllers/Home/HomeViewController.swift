@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         viewModel.viewDidLoad()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewWillAppear()
     }

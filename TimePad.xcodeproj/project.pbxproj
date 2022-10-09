@@ -19,6 +19,8 @@
 		D19EAEF128E9775900FF8EB0 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF028E9775900FF8EB0 /* AddViewModel.swift */; };
 		D19EAEF328E9953B00FF8EB0 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */; };
 		D19EAEF528E9987100FF8EB0 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */; };
+		D1A45ECD28F30E8F007A4657 /* MockHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */; };
+		D1A45ECE28F30F75007A4657 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */; };
 		D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */; };
 		D1CD47B628CF85FD003EB7A0 /* TodayWorksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */; };
 		D1CD47B728CF85FD003EB7A0 /* TodayWorksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */; };
@@ -47,7 +49,6 @@
 		D1E3A94228CCDDB3002BD071 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */; };
 		D1E3A94328CCDDB3002BD071 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */; };
 		D1E3A94428CCDDB3002BD071 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */; };
-		D1FF965728F1B11800A78C4D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		D19EAEF028E9775900FF8EB0 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
+		D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewController.swift; sourceTree = "<group>"; };
 		D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewCell.swift; sourceTree = "<group>"; };
 		D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayWorksTableViewCell.xib; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */,
+				D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -516,6 +519,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E3A90428CCAFB7002BD071 /* TimePadTests.swift in Sources */,
+				D1A45ECD28F30E8F007A4657 /* MockHomeViewController.swift in Sources */,
+				D1A45ECE28F30F75007A4657 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +530,6 @@
 			files = (
 				D1E3A90E28CCAFB7002BD071 /* TimePadUITests.swift in Sources */,
 				D1E3A91028CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift in Sources */,
-				D1FF965728F1B11800A78C4D /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

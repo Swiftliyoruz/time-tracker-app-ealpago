@@ -76,6 +76,6 @@ extension HomeViewModel: HomeViewModelInterface {
     }
 
     func cardDetailsButtonTapped() {
-      view?.preesent(name: Constant.cardDetailsStoryBoardName, id: Constant.cardDetailsStoryBoardID)
+      view?.present(name: Constant.cardDetailsStoryBoardName, id: Constant.cardDetailsStoryBoardID)
     }
 }

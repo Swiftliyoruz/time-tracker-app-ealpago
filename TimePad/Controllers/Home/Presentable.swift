@@ -8,11 +8,11 @@
 import UIKit
 
 protocol Presentable {
-    func preesent(name storyboardName: String, id storyboardID: String)
+    func present(name storyboardName: String, id storyboardID: String)
 }
 
 extension Presentable where Self: UIViewController {
-    func preesent(name storyboardName: String, id storyboardID: String) {
+    func present(name storyboardName: String, id storyboardID: String) {
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: storyboardID)
         present(vc, animated: true, completion: nil)
