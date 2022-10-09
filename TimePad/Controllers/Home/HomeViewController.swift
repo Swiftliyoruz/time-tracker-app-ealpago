@@ -106,9 +106,7 @@ extension HomeViewController: HomeViewInterface {
     }
 
     func reloadTableViewData() {
-        DispatchQueue.main.async {
-            self.workTableView.reloadData()
-        }
+        self.workTableView.reloadData()
     }
 
     func presentCardDetails() {
