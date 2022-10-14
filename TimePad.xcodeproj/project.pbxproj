@@ -7,15 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D146901E28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */; };
+		D16B409828DC807400392B29 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B409628DC807300392B29 /* Task+CoreDataClass.swift */; };
+		D16B409928DC807400392B29 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B409728DC807400392B29 /* Task+CoreDataProperties.swift */; };
+		D16F251228D4A6CA0072B55A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16F251128D4A6CA0072B55A /* Color.xcassets */; };
+		D17B408828DA04B100E37C3D /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B408728DA04B100E37C3D /* CardDetailsViewController.swift */; };
+		D17B408A28DA04C100E37C3D /* CardDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17B408928DA04C100E37C3D /* CardDetailsStoryboard.storyboard */; };
+		D17B408D28DA0A1F00E37C3D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D17B408B28DA0A1F00E37C3D /* DataModel.xcdatamodeld */; };
+		D18F483828E4B97600911A05 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F483728E4B97600911A05 /* HomeViewModel.swift */; };
+		D19EAEEF28E8D7EB00FF8EB0 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEEE28E8D7EB00FF8EB0 /* Presentable.swift */; };
+		D19EAEF128E9775900FF8EB0 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF028E9775900FF8EB0 /* AddViewModel.swift */; };
+		D19EAEF328E9953B00FF8EB0 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */; };
+		D19EAEF528E9987100FF8EB0 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */; };
+		D1A45ECD28F30E8F007A4657 /* MockHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */; };
+		D1A45ECE28F30F75007A4657 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */; };
+		D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */; };
+		D1CD47B628CF85FD003EB7A0 /* TodayWorksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */; };
+		D1CD47B728CF85FD003EB7A0 /* TodayWorksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */; };
 		D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */; };
 		D1E3A8EF28CCAFB5002BD071 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */; };
-		D1E3A8F128CCAFB5002BD071 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8F028CCAFB5002BD071 /* ViewController.swift */; };
+		D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */; };
 		D1E3A8F428CCAFB5002BD071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A8F228CCAFB5002BD071 /* Main.storyboard */; };
 		D1E3A8F628CCAFB7002BD071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A8F528CCAFB7002BD071 /* Assets.xcassets */; };
 		D1E3A8F928CCAFB7002BD071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A8F728CCAFB7002BD071 /* LaunchScreen.storyboard */; };
 		D1E3A90428CCAFB7002BD071 /* TimePadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A90328CCAFB7002BD071 /* TimePadTests.swift */; };
 		D1E3A90E28CCAFB7002BD071 /* TimePadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A90D28CCAFB7002BD071 /* TimePadUITests.swift */; };
 		D1E3A91028CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A90F28CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift */; };
+		D1E3A92228CCCBAA002BD071 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A92128CCCBAA002BD071 /* HomeViewController.swift */; };
+		D1E3A92428CCCBB7002BD071 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A92328CCCBB7002BD071 /* HomeStoryboard.storyboard */; };
+		D1E3A92628CCCBCF002BD071 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A92528CCCBCF002BD071 /* AddViewController.swift */; };
+		D1E3A92828CCCBDD002BD071 /* AddStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A92728CCCBDD002BD071 /* AddStoryboard.storyboard */; };
+		D1E3A92A28CCCBE9002BD071 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3A92928CCCBE9002BD071 /* DetailsViewController.swift */; };
+		D1E3A92C28CCCBF5002BD071 /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A92B28CCCBF5002BD071 /* DetailsStoryboard.storyboard */; };
+		D1E3A93B28CCDDB3002BD071 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93128CCDDB3002BD071 /* Rubik-MediumItalic.ttf */; };
+		D1E3A93C28CCDDB3002BD071 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93228CCDDB3002BD071 /* Rubik-Bold.ttf */; };
+		D1E3A93D28CCDDB3002BD071 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93328CCDDB3002BD071 /* Rubik-Light.ttf */; };
+		D1E3A93E28CCDDB3002BD071 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93428CCDDB3002BD071 /* Rubik-Medium.ttf */; };
+		D1E3A93F28CCDDB3002BD071 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93528CCDDB3002BD071 /* Rubik-Black.ttf */; };
+		D1E3A94028CCDDB3002BD071 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93628CCDDB3002BD071 /* Rubik-Italic.ttf */; };
+		D1E3A94128CCDDB3002BD071 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93728CCDDB3002BD071 /* Rubik-LightItalic.ttf */; };
+		D1E3A94228CCDDB3002BD071 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */; };
+		D1E3A94328CCDDB3002BD071 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */; };
+		D1E3A94428CCDDB3002BD071 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +69,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewModelCell.swift; sourceTree = "<group>"; };
+		D16B409628DC807300392B29 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D16B409728DC807400392B29 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D16F251128D4A6CA0072B55A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		D17B408728DA04B100E37C3D /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		D17B408928DA04C100E37C3D /* CardDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		D17B408C28DA0A1F00E37C3D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		D18F483728E4B97600911A05 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D19EAEEE28E8D7EB00FF8EB0 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		D19EAEF028E9775900FF8EB0 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
+		D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewController.swift; sourceTree = "<group>"; };
+		D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorksTableViewCell.swift; sourceTree = "<group>"; };
+		D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayWorksTableViewCell.xib; sourceTree = "<group>"; };
 		D1E3A8E928CCAFB5002BD071 /* TimePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1E3A8F028CCAFB5002BD071 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D1E3A8F328CCAFB5002BD071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1E3A8F528CCAFB7002BD071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1E3A8F828CCAFB7002BD071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +98,23 @@
 		D1E3A90928CCAFB7002BD071 /* TimePadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimePadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E3A90D28CCAFB7002BD071 /* TimePadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePadUITests.swift; sourceTree = "<group>"; };
 		D1E3A90F28CCAFB7002BD071 /* TimePadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1E3A92128CCCBAA002BD071 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D1E3A92328CCCBB7002BD071 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		D1E3A92528CCCBCF002BD071 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D1E3A92728CCCBDD002BD071 /* AddStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStoryboard.storyboard; sourceTree = "<group>"; };
+		D1E3A92928CCCBE9002BD071 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D1E3A92B28CCCBF5002BD071 /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		D1E3A93128CCDDB3002BD071 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D1E3A93228CCDDB3002BD071 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		D1E3A93328CCDDB3002BD071 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		D1E3A93428CCDDB3002BD071 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		D1E3A93528CCDDB3002BD071 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		D1E3A93628CCDDB3002BD071 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		D1E3A93728CCDDB3002BD071 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +142,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1089D5E28D888CC00AB81D2 /* CardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D17B408728DA04B100E37C3D /* CardDetailsViewController.swift */,
+				D19EAEF428E9987100FF8EB0 /* CardDetailsViewModel.swift */,
+				D17B408928DA04C100E37C3D /* CardDetailsStoryboard.storyboard */,
+			);
+			path = CardDetails;
+			sourceTree = "<group>";
+		};
+		D16B409A28DC807E00392B29 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				D16B409628DC807300392B29 /* Task+CoreDataClass.swift */,
+				D16B409728DC807400392B29 /* Task+CoreDataProperties.swift */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		D1CD47B328CF85BF003EB7A0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD47B428CF85FD003EB7A0 /* TodayWorksTableViewCell.swift */,
+				D146901D28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift */,
+				D1CD47B528CF85FD003EB7A0 /* TodayWorksTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		D1E3A8E028CCAFB4002BD071 = {
 			isa = PBXGroup;
 			children = (
 				D1E3A8EB28CCAFB5002BD071 /* TimePad */,
+				D1E3A94528CCE5D3002BD071 /* Constants */,
+				D1E3A92F28CCDDA5002BD071 /* Fonts */,
 				D1E3A90228CCAFB7002BD071 /* TimePadTests */,
 				D1E3A90C28CCAFB7002BD071 /* TimePadUITests */,
 				D1E3A8EA28CCAFB5002BD071 /* Products */,
@@ -99,13 +196,17 @@
 		D1E3A8EB28CCAFB5002BD071 /* TimePad */ = {
 			isa = PBXGroup;
 			children = (
+				D16B409A28DC807E00392B29 /* CoreDataModels */,
+				D1E3A91D28CCCB6D002BD071 /* Controllers */,
 				D1E3A8EC28CCAFB5002BD071 /* AppDelegate.swift */,
 				D1E3A8EE28CCAFB5002BD071 /* SceneDelegate.swift */,
-				D1E3A8F028CCAFB5002BD071 /* ViewController.swift */,
+				D1E3A8F028CCAFB5002BD071 /* BaseTabBarController.swift */,
 				D1E3A8F228CCAFB5002BD071 /* Main.storyboard */,
 				D1E3A8F528CCAFB7002BD071 /* Assets.xcassets */,
+				D16F251128D4A6CA0072B55A /* Color.xcassets */,
 				D1E3A8F728CCAFB7002BD071 /* LaunchScreen.storyboard */,
 				D1E3A8FA28CCAFB7002BD071 /* Info.plist */,
+				D17B408B28DA0A1F00E37C3D /* DataModel.xcdatamodeld */,
 			);
 			path = TimePad;
 			sourceTree = "<group>";
@@ -114,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E3A90328CCAFB7002BD071 /* TimePadTests.swift */,
+				D1FF965428F1B0F800A78C4D /* Controllers */,
 			);
 			path = TimePadTests;
 			sourceTree = "<group>";
@@ -127,6 +229,99 @@
 			path = TimePadUITests;
 			sourceTree = "<group>";
 		};
+		D1E3A91D28CCCB6D002BD071 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1089D5E28D888CC00AB81D2 /* CardDetails */,
+				D1E3A92028CCCB96002BD071 /* Details */,
+				D1E3A91F28CCCB8F002BD071 /* Add */,
+				D1E3A91E28CCCB85002BD071 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1E3A91E28CCCB85002BD071 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D19EAEEE28E8D7EB00FF8EB0 /* Presentable.swift */,
+				D18F483728E4B97600911A05 /* HomeViewModel.swift */,
+				D1E3A92128CCCBAA002BD071 /* HomeViewController.swift */,
+				D1E3A92328CCCBB7002BD071 /* HomeStoryboard.storyboard */,
+				D1CD47B328CF85BF003EB7A0 /* TableViewCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D1E3A91F28CCCB8F002BD071 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3A92528CCCBCF002BD071 /* AddViewController.swift */,
+				D19EAEF028E9775900FF8EB0 /* AddViewModel.swift */,
+				D1E3A92728CCCBDD002BD071 /* AddStoryboard.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		D1E3A92028CCCB96002BD071 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3A92928CCCBE9002BD071 /* DetailsViewController.swift */,
+				D19EAEF228E9953B00FF8EB0 /* DetailsViewModel.swift */,
+				D1E3A92B28CCCBF5002BD071 /* DetailsStoryboard.storyboard */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		D1E3A92F28CCDDA5002BD071 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3A93028CCDDB3002BD071 /* rubik */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D1E3A93028CCDDB3002BD071 /* rubik */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3A93128CCDDB3002BD071 /* Rubik-MediumItalic.ttf */,
+				D1E3A93228CCDDB3002BD071 /* Rubik-Bold.ttf */,
+				D1E3A93328CCDDB3002BD071 /* Rubik-Light.ttf */,
+				D1E3A93428CCDDB3002BD071 /* Rubik-Medium.ttf */,
+				D1E3A93528CCDDB3002BD071 /* Rubik-Black.ttf */,
+				D1E3A93628CCDDB3002BD071 /* Rubik-Italic.ttf */,
+				D1E3A93728CCDDB3002BD071 /* Rubik-LightItalic.ttf */,
+				D1E3A93828CCDDB3002BD071 /* Rubik-BlackItalic.ttf */,
+				D1E3A93928CCDDB3002BD071 /* Rubik-Regular.ttf */,
+				D1E3A93A28CCDDB3002BD071 /* Rubik-BoldItalic.ttf */,
+			);
+			path = rubik;
+			sourceTree = "<group>";
+		};
+		D1E3A94528CCE5D3002BD071 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD47AE28CCE667003EB7A0 /* ColorConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D1FF965428F1B0F800A78C4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1FF965528F1B0FF00A78C4D /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1FF965528F1B0FF00A78C4D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D1FF965628F1B11800A78C4D /* HomeViewModelTests.swift */,
+				D1A45ECC28F30E8F007A4657 /* MockHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1E3A91328CCAFB7002BD071 /* Build configuration list for PBXNativeTarget "TimePad" */;
 			buildPhases = (
+				D1089D6328D9C0DB00AB81D2 /* Run SwiftLint */,
 				D1E3A8E528CCAFB4002BD071 /* Sources */,
 				D1E3A8E628CCAFB4002BD071 /* Frameworks */,
 				D1E3A8E728CCAFB4002BD071 /* Resources */,
@@ -231,9 +427,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E3A92C28CCCBF5002BD071 /* DetailsStoryboard.storyboard in Resources */,
+				D1E3A94428CCDDB3002BD071 /* Rubik-BoldItalic.ttf in Resources */,
 				D1E3A8F928CCAFB7002BD071 /* LaunchScreen.storyboard in Resources */,
 				D1E3A8F628CCAFB7002BD071 /* Assets.xcassets in Resources */,
+				D1E3A93F28CCDDB3002BD071 /* Rubik-Black.ttf in Resources */,
+				D1E3A94228CCDDB3002BD071 /* Rubik-BlackItalic.ttf in Resources */,
+				D17B408A28DA04C100E37C3D /* CardDetailsStoryboard.storyboard in Resources */,
+				D1CD47B728CF85FD003EB7A0 /* TodayWorksTableViewCell.xib in Resources */,
+				D1E3A92428CCCBB7002BD071 /* HomeStoryboard.storyboard in Resources */,
+				D1E3A93D28CCDDB3002BD071 /* Rubik-Light.ttf in Resources */,
+				D1E3A93B28CCDDB3002BD071 /* Rubik-MediumItalic.ttf in Resources */,
+				D1E3A94128CCDDB3002BD071 /* Rubik-LightItalic.ttf in Resources */,
+				D1E3A93C28CCDDB3002BD071 /* Rubik-Bold.ttf in Resources */,
+				D1E3A94028CCDDB3002BD071 /* Rubik-Italic.ttf in Resources */,
 				D1E3A8F428CCAFB5002BD071 /* Main.storyboard in Resources */,
+				D1E3A92828CCCBDD002BD071 /* AddStoryboard.storyboard in Resources */,
+				D1E3A94328CCDDB3002BD071 /* Rubik-Regular.ttf in Resources */,
+				D1E3A93E28CCDDB3002BD071 /* Rubik-Medium.ttf in Resources */,
+				D16F251228D4A6CA0072B55A /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +465,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D1089D6328D9C0DB00AB81D2 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1E3A8E528CCAFB4002BD071 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1E3A8F128CCAFB5002BD071 /* ViewController.swift in Sources */,
+				D1E3A92628CCCBCF002BD071 /* AddViewController.swift in Sources */,
+				D17B408D28DA0A1F00E37C3D /* DataModel.xcdatamodeld in Sources */,
+				D17B408828DA04B100E37C3D /* CardDetailsViewController.swift in Sources */,
+				D19EAEF328E9953B00FF8EB0 /* DetailsViewModel.swift in Sources */,
+				D146901E28EB7DCE0013451E /* TodayWorksTableViewModelCell.swift in Sources */,
+				D19EAEF128E9775900FF8EB0 /* AddViewModel.swift in Sources */,
+				D1E3A8F128CCAFB5002BD071 /* BaseTabBarController.swift in Sources */,
 				D1E3A8ED28CCAFB5002BD071 /* AppDelegate.swift in Sources */,
+				D1CD47B628CF85FD003EB7A0 /* TodayWorksTableViewCell.swift in Sources */,
+				D1CD47AF28CCE667003EB7A0 /* ColorConstant.swift in Sources */,
 				D1E3A8EF28CCAFB5002BD071 /* SceneDelegate.swift in Sources */,
+				D18F483828E4B97600911A05 /* HomeViewModel.swift in Sources */,
+				D16B409828DC807400392B29 /* Task+CoreDataClass.swift in Sources */,
+				D1E3A92228CCCBAA002BD071 /* HomeViewController.swift in Sources */,
+				D16B409928DC807400392B29 /* Task+CoreDataProperties.swift in Sources */,
+				D1E3A92A28CCCBE9002BD071 /* DetailsViewController.swift in Sources */,
+				D19EAEF528E9987100FF8EB0 /* CardDetailsViewModel.swift in Sources */,
+				D19EAEEF28E8D7EB00FF8EB0 /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +519,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E3A90428CCAFB7002BD071 /* TimePadTests.swift in Sources */,
+				D1A45ECD28F30E8F007A4657 /* MockHomeViewController.swift in Sources */,
+				D1A45ECE28F30F75007A4657 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +854,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D17B408B28DA0A1F00E37C3D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D17B408C28DA0A1F00E37C3D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = D17B408C28DA0A1F00E37C3D /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D1E3A8E128CCAFB4002BD071 /* Project object */;
 }
